@@ -121,6 +121,12 @@ button {
     border-radius: 0 25px 25px 0;
 }
 
+.button-reset {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 25px 25px;
+}
+
 .button-add:hover {
     background-color: #a1a1a1;
 }
