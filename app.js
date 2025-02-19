@@ -3,7 +3,7 @@
 // Não tenho ideiaaaaaaaaaaaaa
 
 let listaNomes = [];
-let quantidadeLimite = 50;
+let quantidadeLimite = 10;
 
 
 function adicionarAmigo() {
@@ -16,7 +16,7 @@ function adicionarAmigo() {
     listaNomes.push(nomeAmigo); // armazena o nome na lista
     atualizarLista();
     document.getElementById("amigo").value = ""; //limpa o campo após adicionar um nome
-    console.log(listaNomes); //exibe no console a lista dos nomes adicionados
+    console.log(`Nomes na lista: ${listaNomes}`); //exibe no console a lista dos nomes adicionados
 }
 
 function atualizarLista() {
@@ -33,6 +33,10 @@ function atualizarLista() {
 function reiniciarLista() {
     listaNomes = []; // Apaga todos os nomes da lista
     atualizarLista(); // Atualiza a exibição da lista (ficará vazia)
-    console.log("Lista reiniciada!"); // Exibe no console
+    console.log("Lista reiniciada"); // Exibe no console
 }
 
+function sortearAmigo() {
+    let resultado = listaNomes[Math.floor(Math. random() * listaNomes.length)];
+    console. log(`Nome sorteado: ${resultado}!`);
+}
