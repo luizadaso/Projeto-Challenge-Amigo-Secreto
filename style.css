@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #eb9c41;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-primary: #864bd4;
+    --color-secondary: #f7f4f8f6;
+    --color-tertiary: #d7beee;
+    --color-button: #4dcf5e;
+    --color-button-hover: #8540d4;
+    --color-text: #ffffff;
     --color-white: #FFFFFF;
 }
 
@@ -17,7 +17,7 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(to bottom, var(--color-primary), #ffcc00); /* Gradiente de laranja */
+    background: linear-gradient(to left, var(--color-primary), #f327e2); /* Gradiente de laranja */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,13 +43,17 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border: 1.5px solid #000;
+    border-radius: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
+    margin: 0 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: calc(100% - 80px);
 }
 
 /* Títulos */
@@ -82,14 +86,16 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    border: 1.9px solid #000;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 /* Estilos de entrada de texto */
@@ -109,34 +115,42 @@ button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    border: 2px solid #000;
+    border: 1.9px solid #000;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-button);
     color: var(--color-text);
     border-radius: 0 25px 25px 0;
+    font-size: large;
 }
 
 .button-reset {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 25px 25px;
+    color: #000;
+    border-radius: 60px 60px;
+    font-size: 20px;
+    align-items: center;
+    
+}
+
+.button-reset:hover {
+    background-color: #ee8181;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #8540d4;
 }
 
 /* Listas */
 ul {
     list-style-type: none;
-    color: var(--color-text);
+    color: #000;
     font-family: "Inter", sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     margin: 20px 0;
 }
 
@@ -157,6 +171,7 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .button-draw img {
