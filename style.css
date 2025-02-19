@@ -15,6 +15,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     height: 100vh;
     background: linear-gradient(to left, var(--color-primary), #f327e2); /* Gradiente de laranja */
@@ -58,15 +59,16 @@ body {
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-size: 52px;
+    font-family: 'Petit Formal Script', sans-serif;
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
+    margin-right: 30px;
 }
 
 .section-title {
-    font-family: "Inter", serif;
+    font-family: "Montserrat", serif;
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
@@ -106,14 +108,14 @@ body {
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botão */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     border: 1.9px solid #000;
     border-radius: 25px;
@@ -149,7 +151,7 @@ button {
 ul {
     list-style-type: none;
     color: #000;
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 25px;
     margin: 20px 0;
 }
@@ -170,8 +172,8 @@ ul {
     padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 18px;
 }
 
 .button-draw img {
