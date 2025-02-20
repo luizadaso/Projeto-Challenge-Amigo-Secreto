@@ -12,23 +12,32 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: flex;
+    
 }
 
 
 body {
+    min-height: 100vh;
     height: 100vh;
     background: linear-gradient(to left, var(--color-primary), #f327e2); /* Gradiente de laranja */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: auto;
+    padding-bottom: 20px;
 }
 
 .main-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
+    flex-grow: 1;
+    padding: 0 20px;
+
+    margin-top: 0;
+
 }
 
 /* Banner */
@@ -42,24 +51,24 @@ body {
 
 /* Seção de entrada */
 .input-section {
-    flex: 60%;
+    flex: 40%;
     background-color: var(--color-secondary);
     border: 1.5px solid #000;
-    border-radius: 64px;
+    border-radius: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
-    margin: 0 40px;
-    margin-bottom: 20px;
-    padding: 20px;
-    width: calc(100% - 80px);
+    padding: 10px;
+    width: calc(100% - 60px);
+    margin: 0 0 20px 0;
+    margin-bottom: 10px;
 }
 
 /* Títulos */
 .main-title {
-    font-size: 52px;
+    font-size: 58px;
     font-family: 'Petit Formal Script', sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -69,7 +78,7 @@ body {
 
 .section-title {
     font-family: "Montserrat", serif;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--color-primary);
     margin: 10px 0;
@@ -86,7 +95,8 @@ body {
 }
 
 .input-name {
-    width: 100%;
+    display: flex;
+    width: 90%;
     padding: 10px;
     border: 1.9px solid #000;
     border-radius: 25px 0 0 25px;
