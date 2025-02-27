@@ -38,5 +38,6 @@ function reiniciarLista() {
 
 function sortearAmigo() {
     let resultado = listaNomes[Math.floor(Math. random() * listaNomes.length)];
-    console. log(`Nome sorteado: ${resultado}!`);
+    resultado = document.getElementById("resultado").textContent = `Sorteado: ${resultado}!`;
+    console.log(`Nome sorteado: ${resultado}!`);
 }
