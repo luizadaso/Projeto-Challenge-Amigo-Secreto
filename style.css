@@ -20,7 +20,7 @@
 body {
     min-height: 100vh;
     height: 100vh;
-    background: linear-gradient(to left, var(--color-primary), #f327e2); /* Gradiente de laranja */
+    background: linear-gradient(to right, var(--color-primary), #f327e2); /* Gradiente de laranja */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -35,7 +35,6 @@ body {
     width: 100%;
     flex-grow: 1;
     padding: 0 20px;
-
     margin-top: 0;
 
 }
@@ -54,21 +53,21 @@ body {
     flex: 40%;
     background-color: var(--color-secondary);
     border: 1.5px solid #000;
-    border-radius: 80px;
+    border-radius: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
-    padding: 10px;
-    width: calc(100% - 60px);
+    padding: 40px;
+    width: calc(100% - 80px);
     margin: 0 0 20px 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Títulos */
 .main-title {
-    font-size: 58px;
+    font-size: 52px;
     font-family: 'Petit Formal Script', sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -81,7 +80,7 @@ body {
     font-size: 28px;
     font-weight: 700;
     color: var(--color-primary);
-    margin: 10px 0;
+    margin: 20px 0;
     text-align: center;
 }
 
@@ -96,8 +95,8 @@ body {
 
 .input-name {
     display: flex;
-    width: 90%;
-    padding: 10px;
+    width: 100%;
+    padding: 20px;
     border: 1.9px solid #000;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
@@ -124,7 +123,7 @@ body {
 
 /* Estilos de botão */
 button {
-    padding: 15px 30px;
+    padding: 15px 25px;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     border: 1.9px solid #000;
