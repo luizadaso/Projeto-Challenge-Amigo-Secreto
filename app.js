@@ -30,14 +30,21 @@ function atualizarLista() {
     });
 }
 
-function reiniciarLista() {
-    listaNomes = []; // Apaga todos os nomes da lista
-    atualizarLista(); // Atualiza a exibição da lista (ficará vazia)
-    console.log("Lista reiniciada"); // Exibe no console
-}
-
 function sortearAmigo() {
+ 
+    if (listaNomes.length === 0) {
+        alert("Adicione nomes antes de sortear!"); 
+        return;
+    }
+
     let resultado = listaNomes[Math.floor(Math. random() * listaNomes.length)];
     resultado = document.getElementById("resultado").textContent = `Sorteado: ${resultado}!`;
     console.log(`Nome sorteado: ${resultado}!`);
+}
+
+function reiniciarLista() {
+    listaNomes = []; // Apaga todos os nomes da lista
+    atualizarLista();
+    document.getElementById("resultado").textContent = "";
+    console.log("Lista reiniciada"); // Exibe no console
 }
