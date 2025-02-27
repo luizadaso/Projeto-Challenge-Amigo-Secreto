@@ -169,7 +169,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #4dcf5e;
+    color: var(--color-primary);
     font-size: 30px;
     font-weight: bold;
     text-align: center;
