@@ -47,7 +47,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 10px 0 0;
 }
 
 /* Seção de entrada */
@@ -61,7 +61,7 @@ body {
     align-items: center;
     padding: 20px;
     width: 100%;
-    padding: 40px;
+    padding: 20px;
     width: calc(100% - 80px);
     margin: 0 0 20px 0;
     margin-bottom: 20px;
@@ -79,10 +79,11 @@ body {
 
 .section-title {
     font-family: "Montserrat", serif;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 700;
     color: var(--color-primary);
     margin: 20px 0;
+    margin-top: 2px;
     text-align: center;
 }
 
@@ -209,13 +210,18 @@ ul {
     /* Media query para telas menores */
     @media (max-width: 600px) {
         .button-add {
-            width: 60%; /* Define a largura do botão como 70% da largura do contêiner pai */
+            width: 50%; /* Define a largura do botão como 70% da largura do contêiner pai */
             max-width: 200px; /* Define uma largura máxima para o botão */
             padding: 10px; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
         }
     
         .button-draw img {
-            width: 70%;
+            width: 55%;
             padding: 10px;
+        }
+        
+        .section-title {
+            font-size: 130%;
+            margin-top: 2px;
         }
     }
