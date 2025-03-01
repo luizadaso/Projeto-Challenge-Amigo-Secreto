@@ -32,10 +32,12 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%; /* Ajuste a largura para 90% ou um valor que você preferir */
+    max-width: 800px; /* Defina uma largura máxima, se desejado */
     flex-grow: 1;
-    padding: 0 20px;
+    padding: 0 20px; /* Mantenha ou ajuste o preenchimento lateral */
     margin-top: 0;
+    margin: auto;
 
 }
 
