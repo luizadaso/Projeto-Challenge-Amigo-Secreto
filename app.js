@@ -22,6 +22,11 @@ function adicionarAmigo() {
     return;
     }
 
+    if (listaNomes.length >= quantidadeLimite) {
+        alert("Limite de 10 amigos atingido. Não é possível adicionar mais.");
+        return;
+    }
+
     // Adiciona o nome à lista se passar nas verificações anteriores
     listaNomes.push(nomeAmigo); // armazena o nome na lista
     atualizarLista(); // Executa a função atualizarLista
@@ -30,7 +35,8 @@ function adicionarAmigo() {
 }
 
 function atualizarLista() {
-    let lista = document.getElementById("listaAmigos");
+    // Atualiza a lista após receber novo nome
+    let lista = document.getElementById("listaAmigos"); 
     lista.innerHTML = "";
 
     listaNomes.forEach((nome) => {
