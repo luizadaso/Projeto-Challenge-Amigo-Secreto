@@ -210,7 +210,7 @@ ul {
     /* Media query para telas menores */
     @media (max-width: 600px) {
         .main-content {
-            width: 100%; /* Aumente a largura para 95% em telas pequenas */
+            width: 120%; /* Aumente a largura para 95% em telas pequenas */
             max-width: none; /* Remove a largura máxima para que ele ocupe mais espaço */
             padding: 0 5px;
             align-items: center;
@@ -222,15 +222,16 @@ ul {
         }
     
         .button-draw img {
-            width: 35%;
-            padding: 10px;
+            width: 25%;
+            padding: 5px;
+            font-size: 10px;
         }
         
         .section-title {
-            font-size: 130%;
+            font-size: 120%;
             margin-top: 2px;
         }
         .input-section {
-            padding: 15px;
+            padding: 17px;
         }
     }
