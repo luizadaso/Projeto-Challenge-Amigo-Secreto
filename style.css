@@ -224,4 +224,7 @@ ul {
             font-size: 130%;
             margin-top: 2px;
         }
+        .input-section {
+            padding: 40px;
+        }
     }
