@@ -205,3 +205,17 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+    /* Media query para telas menores */
+    @media (max-width: 600px) {
+        .button-add {
+            width: 60%; /* Define a largura do botão como 70% da largura do contêiner pai */
+            max-width: 200px; /* Define uma largura máxima para o botão */
+            padding: 10px; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
+        }
+    
+        .button-draw img {
+            width: 70%;
+            padding: 10px;
+        }
+    }
