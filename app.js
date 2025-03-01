@@ -60,6 +60,9 @@ function sortearAmigo() {
     // Remove o nome sorteado da lista
     listaNomes.splice(indiceSorteado, 1);
 
+    // Atualiza a lista para refletir a remoção do nome sorteado
+    atualizarLista();
+
     // Atualiza o resultado na tela
     document.getElementById("resultado").textContent = `Sorteado: ${resultadoSorteio}!`;
     console.log(`Nome sorteado: ${resultadoSorteio}!`);
