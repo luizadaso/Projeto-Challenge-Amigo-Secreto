@@ -12,7 +12,7 @@ function adicionarAmigo() {
 
     // informa mensagem de erro se o campo estiver vazio
     if (nomeAmigo.trim() === "") {
-        alert("Digite um nome válido.");
+        alert("Digite um nome para adicionar.");
         return;
     }
 
@@ -49,7 +49,7 @@ function atualizarLista() {
 function sortearAmigo() {
  
     if (listaNomes.length === 0) {
-        alert("Adicione nomes antes de sortear!"); 
+        alert("Adicione nomes antes de sortear."); 
         return;
     }
 
