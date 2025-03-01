@@ -7,25 +7,26 @@ let quantidadeLimite = 10;
 
 
 function adicionarAmigo() {
-    let nomeAmigo = document.querySelector("#amigo").value; //variavel criada, usuário informa nome
+    //Usuário digita um nome
+    let nomeAmigo = document.querySelector("#amigo").value;
 
-    if (nomeAmigo.trim() === "") {      // informa mensagem de erro se o campo estiver vazio
+    // informa mensagem de erro se o campo estiver vazio
+    if (nomeAmigo.trim() === "") {
         alert("Digite um nome válido.");
         return;
     }
 
-        
-    // Verifica se o nome já existe na lista
+    // Verifica e impede duplicidade de nomes
     if (listaNomes.includes(nomeAmigo)) {
     alert("Este nome já foi adicionado.");
     return;
     }
 
-    // Adiciona o nome à lista se passar nas verificações
+    // Adiciona o nome à lista se passar nas verificações anteriores
     listaNomes.push(nomeAmigo); // armazena o nome na lista
-    atualizarLista();
-    document.getElementById("amigo").value = ""; //limpa o campo após adicionar um nome
-    console.log(`Nomes na lista: ${listaNomes}`); //exibe no console a lista dos nomes adicionados
+    atualizarLista(); // Executa a função atualizarLista
+    document.getElementById("amigo").value = ""; // Limpa o campo após adicionar um nome
+    console.log(`Nomes na lista: ${listaNomes}`); // Exibe no console a lista dos nomes adicionados
 }
 
 function atualizarLista() {
