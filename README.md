@@ -17,7 +17,7 @@ O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de ami
 ## Tecnologias Utilizadas
 
 - **HTML**: Para a estruturação da página web.
-- **CSS**: Para estilização e layout da interface.
+- **CSS**: Para estilização e layout da interface, também configurado para telas de smartpphones.
 - **JavaScript**: Para a lógica de funcionamento do sistema e manipulação do DOM.
 - **Git & GitHub:** Para controle de versão e colaboração, mantendo o histórico do projeto e facilitando o compartilhamento do código.
 
@@ -28,9 +28,15 @@ O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de ami
 3. O nome sorteado será exibido, e ele será removido da lista de amigos disponíveis.
 4. Você pode reiniciar a lista a qualquer momento clicando no botão "Reiniciar".
 
+## Teste e divirta-se com seus amigos
+👉 Acesse aqui: [Amigo Secreto](https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto)
+
 ## Demonstração
 
-Uma demonstração do projeto pode ser encontrada aqui: [Link para o vídeo de demonstração] (adicione o link do vídeo aqui).
+Visualize a demonstração do projeto em funcionamento: 
+
+![Amigo Secreto](https://github.com/user-attachments/assets/a243ed9e-adcd-4ff9-a68c-d4e0ec55d9e8)
+
 
 ## Contribuições
 
