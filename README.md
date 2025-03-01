@@ -19,6 +19,7 @@ O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de ami
 - **HTML**: Para a estruturação da página web.
 - **CSS**: Para estilização e layout da interface.
 - **JavaScript**: Para a lógica de funcionamento do sistema e manipulação do DOM.
+- **Git & GitHub:** Para controle de versão e colaboração, mantendo o histórico do projeto e facilitando o compartilhamento do código.
 
 ## Uso
 
@@ -41,7 +42,7 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LISENSE.txt) para detalhes.
 
 ## Contato
 
