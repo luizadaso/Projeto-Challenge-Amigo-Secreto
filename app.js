@@ -37,10 +37,20 @@ function sortearAmigo() {
         return;
     }
 
-    let resultado = listaNomes[Math.floor(Math. random() * listaNomes.length)];
-    resultado = document.getElementById("resultado").textContent = `Sorteado: ${resultado}!`;
-    console.log(`Nome sorteado: ${resultado}!`);
+    // Sorteia um índice aleatório
+    const indiceSorteado = Math.floor(Math.random() * listaNomes.length);
+    const resultadoSorteio = listaNomes[indiceSorteado];
+
+    // Remove o nome sorteado da lista
+    listaNomes.splice(indiceSorteado, 1);
+
+    // Atualiza o resultado na tela
+    document.getElementById("resultado").textContent = `Sorteado: ${resultadoSorteio}!`;
+    console.log(`Nome sorteado: ${resultadoSorteio}!`);
+
+    return resultadoSorteio;
 }
+
 
 function reiniciarLista() {
     listaNomes = []; // Apaga todos os nomes da lista
