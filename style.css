@@ -210,14 +210,14 @@ ul {
     /* Media query para telas menores */
     @media (max-width: 600px) {
         .main-content {
-            width: 95%; /* Aumente a largura para 95% em telas pequenas */
+            width: 100%; /* Aumente a largura para 95% em telas pequenas */
             max-width: none; /* Remove a largura máxima para que ele ocupe mais espaço */
-            padding: 0 5px; /* Ajuste o preenchimento, se necessário */
+            padding: 0 5px;
             align-items: center;
         }
         .button-add {
-            width: 50%; /* Define a largura do botão como 70% da largura do contêiner pai */
-            max-width: 200px; /* Define uma largura máxima para o botão */
+            width: 50%;
+            max-width: 200px;
             padding: 10px; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
         }
     
@@ -229,5 +229,8 @@ ul {
         .section-title {
             font-size: 130%;
             margin-top: 2px;
+        }
+        .input-section {
+            padding: 15px;
         }
     }
