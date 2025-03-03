@@ -39,6 +39,8 @@ O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de ami
 ## Teste e divirta-se com seus amigos
 👉 Acesse aqui: [Amigo Secreto](https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto)
 
+Se gostou do projeto, não esqueça de deixar uma ⭐ no repositório! 😊  
+
 ## Conquista
 
 Este projeto foi desenvolvido inteiramente por mim para apresentação ao programa [ONE - Oracle Next Education + Alura](https://www.oracle.com/br/education/oracle-next-education/).
