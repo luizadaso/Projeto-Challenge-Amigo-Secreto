@@ -1,7 +1,3 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. 
-//Aqui você deverá desenvolver a lógica para resolver o problema.
-// Não tenho ideiaaaaaaaaaaaaa
-
 let listaNomes = [];
 let quantidadeLimite = 10;
 
@@ -18,8 +14,8 @@ function adicionarAmigo() {
 
     // Verifica e impede duplicidade de nomes
     if (listaNomes.includes(nomeAmigo)) {
-    alert("Este nome já foi adicionado.");
-    return;
+        alert("Este nome já foi adicionado.");
+        return;
     }
 
     if (listaNomes.length >= quantidadeLimite) {
@@ -39,11 +35,28 @@ function atualizarLista() {
     let lista = document.getElementById("listaAmigos"); 
     lista.innerHTML = "";
 
-    listaNomes.forEach((nome) => {
+    listaNomes.forEach((nome, index) => {
         let li = document.createElement("li"); // Cria um novo elemento <li>
         li.textContent = nome; // Adiciona o nome dentro do <li>
+
+        // Cria um ícone de remoção
+        let removeIcon = document.createElement("span");
+        removeIcon.textContent = "✖"; // Você pode substituir por uma imagem se preferir
+        removeIcon.style.cursor = "pointer"; // Muda o cursor para indicar que é clicável
+        removeIcon.style.marginLeft = "10px"; // Adiciona um espaço entre o nome e o ícone
+        removeIcon.onclick = () => {
+            removerAmigo(index); // Chama a função de remoção passando o índice
+        };
+
+        li.appendChild(removeIcon); // Adiciona o ícone de remoção ao <li>
         lista.appendChild(li); // Adiciona o <li> dentro da <ul>
     });
+}
+
+function removerAmigo(index) {
+    listaNomes.splice(index, 1); // Remove o nome da lista pelo índice
+    atualizarLista(); // Atualiza a lista para refletir a remoção
+    console.log(`Nome removido: ${index}`); // Exibe no console o índice do nome removido
 }
 
 function sortearAmigo() {
