@@ -2,6 +2,14 @@
 
 Um sistema interativo de "Amigo Secreto" que permite adicionar, sortear e gerenciar amigos de forma simples e eficiente.
 
+## Demonstração
+
+Visualize a demonstração do projeto em funcionamento: 
+
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/a243ed9e-adcd-4ff9-a68c-d4e0ec55d9e8" width="90%" alt="demonstracao" />
+</div>
+
 ## Descrição
 
 O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de amigos para eventos como festas, confraternizações ou qualquer ocasião em que você queira fazer um sorteio. Com uma interface amigável, é possível adicionar nomes, realizar o sorteio e visualizar os amigos restantes de forma intuitiva.
@@ -31,28 +39,28 @@ O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de ami
 ## Teste e divirta-se com seus amigos
 👉 Acesse aqui: [Amigo Secreto](https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto)
 
-## Demonstração
+Se gostou do projeto, não esqueça de deixar uma ⭐ no repositório! 😊  
 
-Visualize a demonstração do projeto em funcionamento: 
+## Conquista
 
-![Amigo Secreto](https://github.com/user-attachments/assets/a243ed9e-adcd-4ff9-a68c-d4e0ec55d9e8)
+Este projeto foi desenvolvido inteiramente por mim para apresentação ao programa [ONE - Oracle Next Education + Alura](https://www.oracle.com/br/education/oracle-next-education/).
+Com a conclusão e entrega desse sistema, recebi reconhecicmeno e obtive a badge (insígnia):
 
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/c6b07310-fb1d-400e-8653-f715434cdc33" width="18%" alt="badge" />
+</div>
 
-## Contribuições
-
-Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
-
-1. Fork este repositório.
-2. Crie uma nova branch para suas alterações.
-3. Faça suas alterações e envie um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LISENSE.txt) para detalhes.
-
-## Contato
+## Autora
 
 Para mais informações, sinta-se à vontade para entrar em contato:
 
-- GitHub: [luizadaso](https://github.com/luizadaso)
-- Linkedin: [luizadaso](https://www.linkedin.com/in/luizadaso)
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/57cac2a3-49b1-4a0a-aef3-e968523971eb" width="13%" alt="autora" />
+</div>
+
+- [Github](https://github.com/luizadaso)
+- [Linkedin](https://www.linkedin.com/in/luizadaso)
+
+### Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LISENSE.txt) para detalhes.
