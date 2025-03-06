@@ -56,7 +56,7 @@ function atualizarLista() {
 function removerAmigo(index) {
     listaNomes.splice(index, 1); // Remove o nome da lista pelo índice
     atualizarLista(); // Atualiza a lista para refletir a remoção
-    console.log(`Nome removido: ${index}`); // Exibe no console o índice do nome removido
+    console.log(`Nome removido. Lista atualizada: ${listaNomes}`);
 }
 
 function sortearAmigo() {
