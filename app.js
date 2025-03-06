@@ -77,7 +77,7 @@ function sortearAmigo() {
     atualizarLista();
 
     // Atualiza o resultado na tela
-    document.getElementById("resultado").textContent = `Sorteado: ${resultadoSorteio}!`;
+    document.getElementById("resultado").textContent = `Sorteado(a): ${resultadoSorteio}!`;
     console.log(`Nome sorteado: ${resultadoSorteio}!`);
 
     return resultadoSorteio;

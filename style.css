@@ -182,9 +182,9 @@ button {
     background-color: var(--color-tertiary);
     color: #000;
     border-radius: 60px 60px;
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
-    padding: 15px;
+    padding: 12px;
 }
 
 .button-reset:hover {
@@ -206,6 +206,7 @@ a:hover {
 
 /* Listas */
 ul {
+    width: 33%;
     list-style-type: none;
     color: #000;
     font-family: "Montserrat", sans-serif;
@@ -214,7 +215,8 @@ ul {
 }
 
 .result-list {
-    margin-top: 15px;
+    width: 100%;
+    margin-top: 10px;
     color: var(--color-primary);
     font-size: 30px;
     font-weight: bold;
@@ -281,5 +283,9 @@ ul {
         }
         .input-section {
             padding: 17px;
+        }
+
+        .result-list {
+            font-size: 22px;
         }
     }
