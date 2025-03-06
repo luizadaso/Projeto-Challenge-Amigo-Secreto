@@ -105,6 +105,40 @@ body {
     font-size: 16px;
 }
 
+/* Estilos para a lista de amigos */
+.name-list {
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+/* Estilo dos itens da lista */
+.name-list li {
+    display: flex; /* Flexbox para alinhar o texto e o ícone */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaco entre o texto e o ícone */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Espaçamento entre os itens */
+    cursor: default;
+    border: 1.5px solid var(--color-primary); /* Cor do contorno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
+    background-color: var(--color-secondary); /* Cor de fundo */
+    transition: box-shadow 0.3s; /* Transição suave para o sombreamento */
+}
+
+/* Efeito ao passar o mouse sobre os itens da lista */
+.name-list li:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Sombreamento mais forte ao passar o mouse */
+}
+
+/* Estilo do ícone de remoção */
+.name-list li span {
+    margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    color: #a71515; /* Cor do ícone de remoção */
+    font-weight: bold; /* Destaca o ícone */
+    font-size: 20px; /* Tamanho do ícone */
+}
+
 .button-container {
     display: flex;
     font-family: "Montserrat", sans-serif;
@@ -185,6 +219,7 @@ ul {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    padding: 8px;
 }
 
 /* Botão de sortear título */
