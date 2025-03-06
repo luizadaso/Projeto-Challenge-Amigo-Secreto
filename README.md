@@ -7,7 +7,7 @@ Um sistema interativo de "Amigo Secreto" que permite adicionar, sortear e gerenc
 Visualize a demonstração do projeto em funcionamento: 
 
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/a243ed9e-adcd-4ff9-a68c-d4e0ec55d9e8" width="90%" alt="demonstracao" />
+  <img src="https://github.com/user-attachments/assets/bc080b01-7230-437d-8f11-2a2adea46778" width="65%" alt="demonstracao" />
 </div>
 
 ## Descrição
