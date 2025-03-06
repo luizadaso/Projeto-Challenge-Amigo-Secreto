@@ -44,8 +44,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 0;
     width: 100%;
+    padding: 5px;
 }
 
 /* Seção de entrada */
@@ -263,8 +263,9 @@ ul {
         }
 
         .img-casal {
-            width: 18%;
+            width: 18%; /* Ajusta a largura para 18% em telas pequenas */
             max-width: 150px; /* Define uma largura máxima, se desejado */
+            margin-left: -5px; /* Ajuste conforme necessário para telas pequenas */
         }
 
         .button-add {

@@ -1,5 +1,5 @@
 let listaNomes = [];
-let quantidadeLimite = 10;
+let quantidadeLimite = 20;
 
 
 function adicionarAmigo() {
@@ -19,7 +19,7 @@ function adicionarAmigo() {
     }
 
     if (listaNomes.length >= quantidadeLimite) {
-        alert("Limite de 10 amigos atingido. Não é possível adicionar mais.");
+        alert(`Limite de ${quantidadeLimite} amigos atingido. Não é possível adicionar mais.`);
         return;
     }
 
