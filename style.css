@@ -13,9 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: flex;
-    
 }
-
 
 body {
     min-height: 100vh;
@@ -75,6 +73,7 @@ body {
     font-style: italic;
     color: var(--color-white);
     margin-right: 20px;
+    text-align: center;
 }
 
 .section-title {
@@ -248,18 +247,21 @@ ul {
     @media (max-width: 600px) {
 
         .main-title {
-            font-size: 210%;
+            font-size: 300%;
+            margin: 0;
         }
         .main-content {
-            width: 120%; /* Aumente a largura para 95% em telas pequenas */
-            max-width: none; /* Remove a largura máxima para que ele ocupe mais espaço */
+            width: 120%; 
+            max-width: none;
             padding: 0 5px;
             align-items: center;
         }
+
         .img-casal {
-            width: 18%; /* Ajusta a largura para 70% em telas pequenas */
+            width: 18%;
             max-width: 150px; /* Define uma largura máxima, se desejado */
         }
+
         .button-add {
             width: 50%;
             max-width: 200px;
@@ -286,7 +288,7 @@ ul {
         }
         
         .section-title {
-            font-size: 130%;
+            font-size: 140%;
             margin-top: 2px;
         }
         .input-section {
