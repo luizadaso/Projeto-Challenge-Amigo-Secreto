@@ -24,9 +24,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 0px;
     margin-top: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .main-content {
@@ -38,7 +38,6 @@ body {
     padding: 0 20px; /* Mantenha ou ajuste o preenchimento lateral */
     margin-top: 0;
     margin: auto;
-
 }
 
 /* Banner */
@@ -48,6 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px 0 0;
+    width: 100%;
 }
 
 /* Seção de entrada */
@@ -74,7 +74,7 @@ body {
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .section-title {
@@ -246,11 +246,19 @@ ul {
 
     /* Media query para telas menores */
     @media (max-width: 600px) {
+
+        .main-title {
+            font-size: 210%;
+        }
         .main-content {
             width: 120%; /* Aumente a largura para 95% em telas pequenas */
             max-width: none; /* Remove a largura máxima para que ele ocupe mais espaço */
             padding: 0 5px;
             align-items: center;
+        }
+        .img-casal {
+            width: 18%; /* Ajusta a largura para 70% em telas pequenas */
+            max-width: 150px; /* Define uma largura máxima, se desejado */
         }
         .button-add {
             width: 50%;
