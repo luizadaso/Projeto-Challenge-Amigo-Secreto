@@ -246,6 +246,11 @@ ul {
     /* Media query para telas menores */
     @media (max-width: 600px) {
 
+        * {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
         .main-title {
             font-size: 300%;
             margin: 0;
