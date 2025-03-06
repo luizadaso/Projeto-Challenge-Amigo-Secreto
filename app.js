@@ -1,5 +1,6 @@
 let listaNomes = [];
 let quantidadeLimite = 20;
+console.log(`Limite da lista: ${quantidadeLimite}`);
 
 
 function adicionarAmigo() {
