@@ -4,22 +4,17 @@ console.log(`Limite da lista: ${quantidadeLimite}`);
 
 
 function adicionarAmigo() {
-    //Usuário digita um nome
-    let nomeAmigo = document.querySelector("#amigo").value;
+    // Usuário digita um nome
+    const nomeAmigo = document.querySelector("#amigo").value.trim();
 
-    // informa mensagem de erro se o campo estiver vazio
-    if (nomeAmigo.trim() === "") {
+    // Verifica e impede duplicidade de nomes e se o campo está vazio
+    if (nomeAmigo === "") {
         alert("Digite um nome para adicionar.");
         return;
-    }
-
-    // Verifica e impede duplicidade de nomes
-    if (listaNomes.includes(nomeAmigo)) {
+    } else if (listaNomes.includes(nomeAmigo)) {
         alert("Este nome já foi adicionado.");
         return;
-    }
-
-    if (listaNomes.length >= quantidadeLimite) {
+    } else if (listaNomes.length >= quantidadeLimite) {
         alert(`Limite de ${quantidadeLimite} amigos atingido. Não é possível adicionar mais.`);
         return;
     }
