@@ -119,7 +119,7 @@ body {
     margin: 10px 0; /* Espaçamento entre os itens */
     cursor: default;
     border: 1.5px solid var(--color-primary); /* Cor do contorno */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 20px; /* Bordas arredondadas */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
     background-color: var(--color-secondary); /* Cor de fundo */
     transition: box-shadow 0.3s; /* Transição suave para o sombreamento */
@@ -184,7 +184,7 @@ button {
     border-radius: 60px 60px;
     font-size: 20px;
     align-items: center;
-    
+    padding: 15px;
 }
 
 .button-reset:hover {
@@ -209,7 +209,7 @@ ul {
     list-style-type: none;
     color: #000;
     font-family: "Montserrat", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     margin: 20px 0;
 }
 
@@ -227,7 +227,7 @@ ul {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px 40px;
+    padding: 10px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 20px;
@@ -253,13 +253,26 @@ ul {
         .button-add {
             width: 50%;
             max-width: 200px;
-            padding: 10px; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
+            padding: 2%; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
+        }
+
+        ul {
+            width: 100%;
+            padding: 2%;
         }
     
+        .button-draw {
+            width: 115%;
+            padding: 3%;
+        }
+        
         .button-draw img {
-            width: 25%;
-            padding: 5px;
-            font-size: 10px;
+            margin-right: 20px;
+        }
+
+        .button-reset {
+            width: 70%;
+            padding: 10px;
         }
         
         .section-title {
