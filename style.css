@@ -253,7 +253,8 @@ ul {
 
         .main-title {
             font-size: 300%;
-            margin: 0;
+            margin: 10px;
+            padding: 10px;
         }
         .main-content {
             width: 120%; 
@@ -265,7 +266,8 @@ ul {
         .img-casal {
             width: 18%; /* Ajusta a largura para 18% em telas pequenas */
             max-width: 150px; /* Define uma largura máxima, se desejado */
-            margin-left: -5px; /* Ajuste conforme necessário para telas pequenas */
+            margin-left: -70px; /* Ajuste conforme necessário para telas pequenas */
+            padding: 40px;
         }
 
         .button-add {
