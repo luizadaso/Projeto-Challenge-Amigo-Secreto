@@ -101,7 +101,12 @@ function inicializarApp() {
 
             return resultadoSorteio;
         } else if (tipoSorteioAtivo === 'amigoSecreto') {
+            if (listaNomes.length === 0) {
+                alert("Adicione nomes antes de sortear.");
+                return;
+            }
             gerarQRCodes();
+            document.querySelector(".button-draw").disabled = true; // Desabilita o botão "Sortear amigo"
         }
     }
 
@@ -135,7 +140,7 @@ function inicializarApp() {
         const qrCodeDisplay = document.getElementById("qrCode");
         const qrNameDisplay = document.getElementById("qrName");
         qrCodeDisplay.innerHTML = '';
-        qrNameDisplay.innerHTML = `<strong style="color: purple;">${listaNomes[index]}</strong>, seu amigo secreto é:`;
+        qrNameDisplay.innerHTML = `<strong style="color: purple;">${listaNomes[index]}</strong>, Seu amigo secreto é:`; // Mensagem personalizada com nome em negrito e roxo
 
         $(qrCodeDisplay).qrcode(qrCodes[index]);
 
@@ -161,6 +166,14 @@ function inicializarApp() {
         location.reload(); // Recarrega a página
     }
 
+    function verificarTipoSorteioAoClicar() {
+        if (tipoSorteioAtivo === '') {
+            alert("Por favor, selecione um tipo de sorteio antes de continuar.");
+            return false; // Impede a interação com o campo
+        }
+        return true; // Permite a interação com o campo
+    }
+
     window.selecionaAmigoSecreto = selecionaAmigoSecreto;
     window.selecionaSorteador = selecionaSorteador;
     window.adicionarAmigo = adicionarAmigo;
@@ -168,6 +181,7 @@ function inicializarApp() {
     window.showPreviousQR = showPreviousQR;
     window.showNextQR = showNextQR;
     window.reiniciarLista = reiniciarLista;
+    window.verificarTipoSorteioAoClicar = verificarTipoSorteioAoClicar;
 
     window.onload = function() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -177,6 +191,16 @@ function inicializarApp() {
             const decodedName = atob(amigo); // Decodifica o nome em base64
             document.getElementById("resultado").textContent = `Você escaneou o QR Code! Amigo: ${decodedName}`;
         }
+
+        // Adiciona o evento de clique ao campo de input
+        document.querySelector("#amigo").addEventListener("click", function(event) {
+            if (!verificarTipoSorteioAoClicar()) {
+                event.preventDefault(); // Impede a interação com o campo
+            }
+        });
+
+        // Habilita o botão "Sortear amigo" ao carregar a página
+        document.querySelector(".button-draw").disabled = false;
     };
 }
 

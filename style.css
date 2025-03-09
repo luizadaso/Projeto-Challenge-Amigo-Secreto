@@ -7,6 +7,7 @@
     --color-text: #ffffff;
     --color-text-black: #000;
     --color-white: #FFFFFF;
+    --color-disabled: #d3d3d3; /* Cor cinza para o botão desabilitado */
 }
 
 /* Estilos gerais */
@@ -196,8 +197,6 @@ button {
     padding: 12px;
 }
 
-
-
 .button-reset:hover {
     background-color: #ee8181;
 }
@@ -255,11 +254,18 @@ ul {
     background-color: var(--color-button-hover);
 }
 
+.button-draw:disabled {
+    background-color: var(--color-disabled); /* Cor cinza para o botão desabilitado */
+    color: var(--color-text-black); /* Cor do texto para o botão desabilitado */
+    cursor: not-allowed; /* Cursor não permitido para o botão desabilitado */
+}
+
 .qr-name {
     text-align: center; /* Centraliza verticalmente os itens */
     font-family: "Montserrat", sans-serif;
     padding: 10px; /* Espaçamento interno */
     margin: 2px; /* Espaçamento entre os itens */
+    margin-bottom: 10px;
     cursor: default;
 }
 
@@ -297,74 +303,74 @@ ul {
     cursor: not-allowed; /* Muda o cursor para indicar que não é clicável */
 }
 
-    /* Media query para telas menores */
-    @media (max-width: 600px) {
+/* Media query para telas menores */
+@media (max-width: 600px) {
 
-        * {
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-
-        .main-title {
-            font-size: 300%;
-            margin: 10px;
-            padding: 10px;
-        }
-        .main-content {
-            width: 120%; 
-            max-width: none;
-            padding: 0 5px;
-            align-items: center;
-        }
-
-        .img-casal {
-            width: 18%; /* Ajusta a largura para 18% em telas pequenas */
-            max-width: 150px; /* Define uma largura máxima, se desejado */
-            margin-left: -70px; /* Ajuste conforme necessário para telas pequenas */
-            padding: 40px;
-        }
-
-        .button-aSecretoSorteador {
-            font-size: 90%; 
-            padding: 10px;
-            margin-left: 5px;
-        }
-
-        .button-add {
-            width: 50%;
-            max-width: 200px;
-            padding: 2%; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
-        }
-
-        ul {
-            width: 100%;
-            font-size: 115%;
-            padding: 2px;
-        }
-    
-        .button-draw {
-            width: 115%;
-            padding: 3%;
-        }
-        
-        .button-draw img {
-            margin-right: 20px;
-        }
-
-        .button-reset {
-            width: 70%;
-            padding: 10px;
-        }
-        
-        .section-title {
-            font-size: 90%;
-            margin-top: 2px;
-        }
-        .input-section {
-            padding: 17px;
-        }
-
-        .result-list {
-            font-size: 22px;
-        }
+    * {
+        margin-bottom: 0;
+        margin-top: 0;
     }
+
+    .main-title {
+        font-size: 300%;
+        margin: 10px;
+        padding: 10px;
+    }
+    .main-content {
+        width: 120%; 
+        max-width: none;
+        padding: 0 5px;
+        align-items: center;
+    }
+
+    .img-casal {
+        width: 18%; /* Ajusta a largura para 18% em telas pequenas */
+        max-width: 150px; /* Define uma largura máxima, se desejado */
+        margin-left: -70px; /* Ajuste conforme necessário para telas pequenas */
+        padding: 40px;
+    }
+
+    .button-aSecretoSorteador {
+        font-size: 90%; 
+        padding: 10px;
+        margin-left: 5px;
+    }
+
+    .button-add {
+        width: 50%;
+        max-width: 200px;
+        padding: 2%; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
+    }
+
+    ul {
+        width: 100%;
+        font-size: 115%;
+        padding: 2px;
+    }
+
+    .button-draw {
+        width: 115%;
+        padding: 3%;
+    }
+    
+    .button-draw img {
+        margin-right: 20px;
+    }
+
+    .button-reset {
+        width: 70%;
+        padding: 10px;
+    }
+    
+    .section-title {
+        font-size: 90%;
+        margin-top: 2px;
+    }
+    .input-section {
+        padding: 17px;
+    }
+
+    .result-list {
+        font-size: 22px;
+    }
+}
