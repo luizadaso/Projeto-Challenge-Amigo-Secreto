@@ -189,7 +189,7 @@ function inicializarApp() {
 
         if (amigo) {
             const decodedName = atob(amigo); // Decodifica o nome em base64
-            document.getElementById("resultado").textContent = `Você escaneou o QR Code! Amigo: ${decodedName}`;
+            document.getElementById("resultado").textContent = `Seu Amigo Secreto é: ${decodedName}`;
         }
 
         // Adiciona o evento de clique ao campo de input
