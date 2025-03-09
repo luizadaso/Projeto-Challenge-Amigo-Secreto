@@ -1,5 +1,5 @@
 let listaNomes = [];
-let quantidadeLimite = 20;
+let quantidadeLimite = 50;
 console.log(`Limite da lista: ${quantidadeLimite}`);
 
 
