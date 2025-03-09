@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
     <title>Amigo Secreto</title>
 </head>
 
@@ -24,13 +27,28 @@
         </header>
         
         <section class="input-section">
-            <h2 class="section-title">Adicione os nomes dos seus amigos</h2>
+            <h2 class="section-title">Selecione o tipo do sorteio:</h2>
+
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
+                <button class="button-aSecretoSorteador" onclick="selecionaAmigoSecreto()">Amigo Secreto</button>
+                <button class="button-aSecretoSorteador" onclick="selecionaSorteador()">Sorteador</button>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome" disabled>
                 <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
             </div>
             
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+
+            <div id="qrCodeDisplay" class="qr-code-display">
+                <div id="qrName" class="qr-name"></div>
+                <div class="qr-container">
+                    <button id="prevButton" onclick="showPreviousQR()" style="display: none;">&#9664;</button> <!-- Inicialmente oculto -->
+                    <div id="qrCode"></div> <!-- Contêiner do QR Code -->
+                    <button id="nextButton" onclick="showNextQR()" style="display: none;">&#9654;</button> <!-- Inicialmente oculto -->
+                </div>
+            </div>
+            
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">

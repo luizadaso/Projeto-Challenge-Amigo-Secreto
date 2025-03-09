@@ -5,6 +5,7 @@
     --color-button: #4dcf5e;
     --color-button-hover: #8540d4;
     --color-text: #ffffff;
+    --color-text-black: #000;
     --color-white: #FFFFFF;
 }
 
@@ -78,11 +79,8 @@ body {
 
 .section-title {
     font-family: "Montserrat", serif;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 18px;
     color: var(--color-primary);
-    margin: 20px 0;
-    margin-top: 2px;
     text-align: center;
 }
 
@@ -150,7 +148,7 @@ body {
 /* Estilos de entrada de texto */
 .input-title {
     flex: 1;
-    padding: 10px 15px;
+    padding: 5px;
     font-size: 16px;
     border: 2px solid #333;
     border-right: none;
@@ -170,6 +168,18 @@ button {
     cursor: pointer;
 }
 
+.button-aSecretoSorteador {
+    background-color: var(--color-tertiary);
+    color: var(--color-text-black);
+    font-size: medium; 
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.button-aSecretoSorteador.active {
+    background-color: #ee8181; /* Cor quando ativo */
+}
+
 .button-add {
     background-color: var(--color-button);
     color: var(--color-text);
@@ -179,12 +189,14 @@ button {
 
 .button-reset {
     background-color: var(--color-tertiary);
-    color: #000;
+    color: var(--color-text-black);
     border-radius: 60px 60px;
     font-size: 18px;
     align-items: center;
     padding: 12px;
 }
+
+
 
 .button-reset:hover {
     background-color: #ee8181;
@@ -220,7 +232,7 @@ ul {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    padding: 8px;
+    padding: 2px;
 }
 
 /* Botão de sortear título */
@@ -241,6 +253,48 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.qr-name {
+    text-align: center; /* Centraliza verticalmente os itens */
+    font-family: "Montserrat", sans-serif;
+    padding: 10px; /* Espaçamento interno */
+    margin: 2px; /* Espaçamento entre os itens */
+    cursor: default;
+}
+
+.qr-code-display {
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 2px;
+    text-align: center;
+}
+
+.qr-container {
+    display: flex;               /* Ativa o modelo de layout flexível para o contêiner do QR code */
+    align-items: center;        /* Centraliza verticalmente os itens */
+    justify-content: center;      /* Centraliza horizontalmente os itens */
+}
+
+.qr-container #qrCode {
+    margin: 0 10px;            /* Espaçamento entre o QR code e os botões */
+}
+
+.navigation-buttons {
+    display: flex;              /* Ativa o modelo de layout flexível para os botões */
+    flex-direction: row;       /* Organiza os botões em linha */
+}
+
+.navigation-buttons button {
+    font-size: 20px;           /* Ajusta o tamanho do botão */
+    padding: 5px 10px;         /* Espaçamento interno */
+    margin: 0 5px;             /* Espaçamento entre os botões */
+    cursor: pointer;           /* Muda o cursor para indicar que é clicável */
+}
+
+.navigation-buttons button:disabled {
+    opacity: 0.5; /* Torna o botão mais claro quando desabilitado */
+    cursor: not-allowed; /* Muda o cursor para indicar que não é clicável */
 }
 
     /* Media query para telas menores */
@@ -270,6 +324,12 @@ ul {
             padding: 40px;
         }
 
+        .button-aSecretoSorteador {
+            font-size: 90%; 
+            padding: 10px;
+            margin-left: 5px;
+        }
+
         .button-add {
             width: 50%;
             max-width: 200px;
@@ -278,7 +338,8 @@ ul {
 
         ul {
             width: 100%;
-            padding: 2%;
+            font-size: 115%;
+            padding: 2px;
         }
     
         .button-draw {
@@ -296,7 +357,7 @@ ul {
         }
         
         .section-title {
-            font-size: 140%;
+            font-size: 90%;
             margin-top: 2px;
         }
         .input-section {
