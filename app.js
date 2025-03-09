@@ -135,7 +135,7 @@ function inicializarApp() {
         const qrCodeDisplay = document.getElementById("qrCode");
         const qrNameDisplay = document.getElementById("qrName");
         qrCodeDisplay.innerHTML = '';
-        qrNameDisplay.textContent = listaNomes[index];
+        qrNameDisplay.innerHTML = `<strong>${listaNomes[index]}</strong>, seu amigo secreto é:`;
 
         $(qrCodeDisplay).qrcode(qrCodes[index]);
 
