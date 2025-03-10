@@ -7,7 +7,7 @@
     --color-text: #ffffff;
     --color-text-black: #000;
     --color-white: #FFFFFF;
-    --color-disabled: #d3d3d3; /* Cor cinza para o botão desabilitado */
+    --color-disabled: #d3d3d3;
 }
 
 /* Estilos gerais */
@@ -189,7 +189,7 @@ button {
 }
 
 .button-reset {
-    background-color: var(--color-tertiary);
+    background-color: #d791e9;
     color: var(--color-text-black);
     border-radius: 60px 60px;
     font-size: 18px;
@@ -256,7 +256,7 @@ ul {
 
 .button-draw:disabled {
     background-color: var(--color-disabled); /* Cor cinza para o botão desabilitado */
-    color: var(--color-text-black); /* Cor do texto para o botão desabilitado */
+    color: #333; /* Cor do texto para o botão desabilitado */
     cursor: not-allowed; /* Cursor não permitido para o botão desabilitado */
 }
 

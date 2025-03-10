@@ -31,7 +31,7 @@ function inicializarApp() {
 
     function verificarTipoSorteio() {
         if (tipoSorteioAtivo === '') {
-            alert("Por favor, selecione um tipo de sorteio antes de continuar.");
+            alert("Selecione um tipo de sorteio antes de continuar.");
             return false; // Retorna falso se nenhum tipo de sorteio estiver selecionado
         }
         return true; // Retorna verdadeiro se um tipo de sorteio estiver selecionado
@@ -140,7 +140,7 @@ function inicializarApp() {
         const qrCodeDisplay = document.getElementById("qrCode");
         const qrNameDisplay = document.getElementById("qrName");
         qrCodeDisplay.innerHTML = '';
-        qrNameDisplay.innerHTML = `<strong style="color: purple;">${listaNomes[index]}</strong>, Seu amigo secreto é:`; // Mensagem personalizada com nome em negrito e roxo
+        qrNameDisplay.innerHTML = `<strong style="color: purple;">${listaNomes[index]}</strong>, escaneie e descubra seu Amigo Secreto:`; // Mensagem personalizada com nome em negrito e roxo
 
         $(qrCodeDisplay).qrcode(qrCodes[index]);
 
@@ -168,7 +168,7 @@ function inicializarApp() {
 
     function verificarTipoSorteioAoClicar() {
         if (tipoSorteioAtivo === '') {
-            alert("Por favor, selecione um tipo de sorteio antes de continuar.");
+            alert("Selecione um tipo de sorteio antes de continuar.");
             return false; // Impede a interação com o campo
         }
         return true; // Permite a interação com o campo
