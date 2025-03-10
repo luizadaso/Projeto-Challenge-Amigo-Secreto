@@ -280,7 +280,7 @@ ul {
 }
 
 .qr-container {
-    display: flex;               /* Ativa o modelo de layout flexível para o contêiner do QR code */
+    display: block;               /* Ativa o modelo de layout flexível para o contêiner do QR code */
     align-items: center;        /* Centraliza verticalmente os itens */
     justify-content: center; 
 }
@@ -290,13 +290,13 @@ ul {
 }
 
 .navigation-buttons {
-    display: block;              /* Ativa o modelo de layout flexível para os botões */
+    display: block;
     flex-direction: row;       /* Organiza os botões em linha */
 }
 
 .navigation-buttons button {
     font-size: 5px;
-    padding: 5px 10px;         /* Espaçamento interno */
+    padding: 10px;         /* Espaçamento interno */
     margin: 0 5px;             /* Espaçamento entre os botões */
     cursor: pointer;
 }
@@ -322,7 +322,7 @@ ul {
     }
 
     .main-title {
-        font-size: 270%;
+        font-size: 280%;
         margin: 0%;
         padding: 0%;
         margin-right: 2px;
@@ -336,7 +336,7 @@ ul {
     }
 
     .img-casal {
-        width: 19%;
+        width: 18%;
         max-width: 150px;
         padding: 20px;
         margin-left: -40px;
