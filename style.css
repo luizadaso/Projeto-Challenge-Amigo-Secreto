@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: flex;
+    align-items: center;
 }
 
 body {
@@ -184,8 +185,9 @@ button {
 .button-add {
     background-color: var(--color-button);
     color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 30px 30px 0;
     font-size: medium;
+    padding: 20px;
 }
 
 .button-reset {
@@ -270,37 +272,38 @@ ul {
 }
 
 .qr-code-display {
-    margin-top: 20px;
-    font-size: 25px;
+    margin-top: 10px;
+    font-size: 18px;
     padding: 2px;
     text-align: center;
+    margin: 0;
 }
 
 .qr-container {
     display: flex;               /* Ativa o modelo de layout flexível para o contêiner do QR code */
     align-items: center;        /* Centraliza verticalmente os itens */
-    justify-content: center;      /* Centraliza horizontalmente os itens */
+    justify-content: center; 
 }
 
 .qr-container #qrCode {
-    margin: 0 10px;            /* Espaçamento entre o QR code e os botões */
+    margin: 10px;            /* Espaçamento entre o QR code e os botões */
 }
 
 .navigation-buttons {
-    display: flex;              /* Ativa o modelo de layout flexível para os botões */
+    display: block;              /* Ativa o modelo de layout flexível para os botões */
     flex-direction: row;       /* Organiza os botões em linha */
 }
 
 .navigation-buttons button {
-    font-size: 20px;           /* Ajusta o tamanho do botão */
+    font-size: 5px;
     padding: 5px 10px;         /* Espaçamento interno */
     margin: 0 5px;             /* Espaçamento entre os botões */
-    cursor: pointer;           /* Muda o cursor para indicar que é clicável */
+    cursor: pointer;
 }
 
 .navigation-buttons button:disabled {
-    opacity: 0.5; /* Torna o botão mais claro quando desabilitado */
-    cursor: not-allowed; /* Muda o cursor para indicar que não é clicável */
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Media query para telas menores */
@@ -311,11 +314,20 @@ ul {
         margin-top: 0;
     }
 
-    .main-title {
-        font-size: 300%;
-        margin: 10px;
-        padding: 10px;
+    .header-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
     }
+
+    .main-title {
+        font-size: 270%;
+        margin: 0%;
+        padding: 0%;
+        margin-right: 2px;
+    }
+
     .main-content {
         width: 120%; 
         max-width: none;
@@ -324,10 +336,10 @@ ul {
     }
 
     .img-casal {
-        width: 18%; /* Ajusta a largura para 18% em telas pequenas */
-        max-width: 150px; /* Define uma largura máxima, se desejado */
-        margin-left: -70px; /* Ajuste conforme necessário para telas pequenas */
-        padding: 40px;
+        width: 19%;
+        max-width: 150px;
+        padding: 20px;
+        margin-left: -40px;
     }
 
     .button-aSecretoSorteador {
@@ -337,20 +349,22 @@ ul {
     }
 
     .button-add {
-        width: 50%;
         max-width: 200px;
-        padding: 2%; /* Ajuste o preenchimento para torná-lo mais confortável para toque */
+        padding-left: 4%;
+        padding-right: 4%;
     }
 
     ul {
         width: 100%;
         font-size: 115%;
-        padding: 2px;
+        padding: 0;
+        margin: 0;
     }
 
     .button-draw {
         width: 115%;
         padding: 3%;
+        margin-top: 0;
     }
     
     .button-draw img {
@@ -372,5 +386,6 @@ ul {
 
     .result-list {
         font-size: 22px;
+        margin: 0;
     }
 }
