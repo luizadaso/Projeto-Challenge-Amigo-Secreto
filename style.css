@@ -14,7 +14,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: flex;
+    box-sizing: border-box;
     align-items: center;
 }
 
@@ -38,7 +38,7 @@ body {
     flex-grow: 1;
     padding: 0 20px; /* Mantenha ou ajuste o preenchimento lateral */
     margin-top: 0;
-    margin: auto;
+    margin: 0px;
 }
 
 /* Banner */
@@ -81,9 +81,11 @@ body {
 
 .section-title {
     font-family: "Montserrat", serif;
-    font-size: 22px;
+    font-size: 18px;
     color: var(--color-primary);
     text-align: center;
+    padding: 2px;
+    margin-top: 0px;
 }
 
 /* Contêineres de entrada e botão */
@@ -274,10 +276,10 @@ ul {
 
 .qr-code-display {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 24px;
     padding: 2px;
     text-align: center;
-    margin: 0;
+    margin: 0px;
 }
 
 .qr-container {
@@ -323,10 +325,10 @@ ul {
     }
 
     .main-title {
-        font-size: 280%;
+        font-size: 300%;
         margin: 0%;
         padding: 0%;
-        margin-right: 2px;
+        margin-left: 50px;
     }
 
     .main-content {
@@ -337,10 +339,10 @@ ul {
     }
 
     .img-casal {
-        width: 18%;
+        width: 23%;
         max-width: 150px;
-        padding: 20px;
-        margin-left: -40px;
+        padding: 10px;
+        margin-right: 50px;
     }
 
     .button-aSecretoSorteador {
