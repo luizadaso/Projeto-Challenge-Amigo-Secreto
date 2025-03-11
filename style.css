@@ -106,13 +106,9 @@ body {
     font-size: 16px;
 }
 
-/* Estilos para a lista de amigos */
-.name-list {
-    padding: 0; /* Remove o padding padrão da lista */
-}
-
-/* Estilo dos itens da lista */
-.name-list li {
+/* Estilo dos nomes adicionados na lista */
+.listaDeAmigos li {
+    width: 100%;
     display: flex; /* Flexbox para alinhar o texto e o ícone */
     align-items: center; /* Centraliza verticalmente os itens */
     justify-content: space-between; /* Espaco entre o texto e o ícone */
@@ -126,13 +122,13 @@ body {
     transition: box-shadow 0.3s; /* Transição suave para o sombreamento */
 }
 
-/* Efeito ao passar o mouse sobre os itens da lista */
-.name-list li:hover {
+/* Efeito ao passar o mouse sobre os nomes da lista */
+.listaDeAmigos li:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Sombreamento mais forte ao passar o mouse */
 }
 
-/* Estilo do ícone de remoção */
-.name-list li span {
+/* Estilo do ícone de remoção de nomes da lista */
+.listaDeAmigos li span {
     margin-left: 5px; /* Espaçamento entre o texto e o ícone */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     color: #a71515; /* Cor do ícone de remoção */
@@ -140,7 +136,7 @@ body {
     font-size: 20px; /* Tamanho do ícone */
 }
 
-.button-container {
+.button-sortearAmigo {
     display: flex;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -172,7 +168,7 @@ button {
     cursor: pointer;
 }
 
-.button-aSecretoSorteador {
+.button-ativarAmigoSecretoEsorteador {
     background-color: var(--color-tertiary);
     color: var(--color-text-black);
     font-size: medium; 
@@ -180,7 +176,7 @@ button {
     margin-left: 5px;
 }
 
-.button-aSecretoSorteador.active {
+.button-ativarAmigoSecretoEsorteador.active {
     background-color: var(--color-primary); /* Cor quando ativo */
     color: var(--color-white);
 }
@@ -193,7 +189,7 @@ button {
     padding: 20px;
 }
 
-.button-reset {
+.button-reiniciar {
     background-color: var(--color-tertiary);
     color: var(--color-text-black);
     border-radius: 60px 60px;
@@ -202,7 +198,7 @@ button {
     padding: 12px;
 }
 
-.button-reset:hover {
+.button-reiniciar:hover {
     background-color: #ee933f;
 }
 
@@ -221,15 +217,13 @@ a:hover {
 
 /* Listas */
 ul {
-    width: 33%;
-    list-style-type: none;
     color: #000;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     margin: 20px 0;
 }
 
-.result-list {
+.resultado-sorteio {
     width: 90%;
     margin-top: 0;
     color: var(--color-primary);
@@ -240,7 +234,7 @@ ul {
 }
 
 /* Botão de sortear título */
-.button-draw {
+.button-sortear-amigo {
     display: flex;
     align-items: center;
     width: 100%;
@@ -251,15 +245,15 @@ ul {
     margin: 10px;
 }
 
-.button-draw img {
-    margin-right: 40px;
+.button-sortear-amigo img {
+    margin-right: 30px;
 }
 
-.button-draw:hover {
+.button-sortear-amigo:hover {
     background-color: var(--color-button-hover);
 }
 
-.button-draw:disabled {
+.button-sortear-amigo:disabled {
     background-color: var(--color-disabled); /* Cor cinza para o botão desabilitado */
     color: #333; /* Cor do texto para o botão desabilitado */
     cursor: not-allowed; /* Cursor não permitido para o botão desabilitado */
@@ -345,7 +339,7 @@ ul {
         margin-right: 50px;
     }
 
-    .button-aSecretoSorteador {
+    .button-ativarAmigoSecretoEsorteador {
         font-size: 90%; 
         padding: 10px;
         margin-left: 5px;
@@ -364,17 +358,17 @@ ul {
         margin: 0;
     }
 
-    .button-draw {
+    .button-sortear-amigo {
         width: 115%;
         padding: 3%;
         margin-top: 0;
     }
     
-    .button-draw img {
+    .button-sortear-amigo img {
         margin-right: 20px;
     }
 
-    .button-reset {
+    .button-reiniciar {
         width: 70%;
         padding: 10px;
     }

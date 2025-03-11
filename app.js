@@ -19,7 +19,7 @@ function inicializarApp() {
 
     function atualizarEstadoBotoes() {
         const amigoInput = document.querySelector("#amigo");
-        const [amigoSecretoButton, sorteadorButton] = document.querySelectorAll(".button-aSecretoSorteador");
+        const [amigoSecretoButton, sorteadorButton] = document.querySelectorAll(".button-ativarAmigoSecretoEsorteador");
 
         // Habilita/desabilita inputs e botões
         amigoInput.disabled = tipoSorteioAtivo === '';
@@ -96,7 +96,7 @@ function inicializarApp() {
             const resultadoSorteio = listaNomes.splice(indiceSorteado, 1)[0];
 
             atualizarLista();
-            document.getElementById("resultado").textContent = `Sorteado(a): ${resultadoSorteio}!`;
+            document.getElementById("resultado").textContent = `${resultadoSorteio}!`;
             console.log(`Nome sorteado: ${resultadoSorteio}!`);
 
             ocultarElementos();
@@ -107,7 +107,7 @@ function inicializarApp() {
                 return;
             }
             gerarQRCodes();
-            document.querySelector(".button-draw").disabled = true; // Desabilita o botão "Sortear amigo"
+            document.querySelector(".button-sortear-amigo").disabled = true; // Desabilita o botão "Sortear amigo"
             ocultarElementos();
         }
     }
@@ -178,7 +178,7 @@ function inicializarApp() {
 
     function ocultarElementos() {
         document.querySelector(".section-title").style.display = "none";
-        document.querySelectorAll(".button-aSecretoSorteador").forEach(button => button.style.display = "none");
+        document.querySelectorAll(".button-ativarAmigoSecretoEsorteador").forEach(button => button.style.display = "none");
         document.querySelector(".button-add").style.display = "none";
         document.querySelector("#amigo").style.display = "none";
     }
@@ -198,7 +198,7 @@ function inicializarApp() {
 
         if (amigo) {
             const decodedName = atob(amigo); // Decodifica o nome em base64
-            document.getElementById("resultado").textContent = `Seu Amigo Secreto é: ${decodedName}`;
+            document.getElementById("resultado").innerHTML = `<span style="color: black;">Seu Amigo Secreto é: </span>${decodedName}`;
         }
 
         // Adiciona o evento de clique ao campo de input
@@ -208,8 +208,8 @@ function inicializarApp() {
             }
         });
 
-        // Habilita o botão "Sortear amigo" ao carregar a página
-        document.querySelector(".button-draw").disabled = false;
+        // Habilita o botão "Sortear amigo" ao recarregar a página
+        document.querySelector(".button-sortear-amigo").disabled = false;
     };
 }
 
