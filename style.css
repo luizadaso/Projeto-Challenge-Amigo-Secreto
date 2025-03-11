@@ -21,7 +21,7 @@
 body {
     min-height: 100vh;
     height: 100vh;
-    background: linear-gradient(to right, var(--color-primary), #f327e2); /* Gradiente de laranja */
+    background: linear-gradient(to right, var(--color-primary), #990b8d); /* Gradiente de laranja */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -301,6 +301,21 @@ ul {
 .navigation-buttons button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.qr-link {
+    margin-bottom: 15px; /* Adiciona espaço acima do link */
+}
+
+.qr-link a {
+    color: var(--color-primary);
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.qr-link a:hover {
+    color: #990b8d
 }
 
 /* Media query para telas menores */
