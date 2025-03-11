@@ -11,7 +11,7 @@ function inicializarApp() {
         tipoSorteioAtivo = 'amigoSecreto';
         atualizarEstadoBotoes();
         // Define o placeholder inicial para o líder do sorteio
-        document.querySelector("#amigo").placeholder = "Digite o nome do líder do sorteio";
+        document.querySelector("#amigo").placeholder = "Nome do Líder";
     }
 
     function selecionaSorteador() {
@@ -252,8 +252,7 @@ function inicializarApp() {
             }
         });
 
-        // Define o placeholder inicial para o líder do sorteio
-        document.querySelector("#amigo").placeholder = "Digite o nome do Líder";
+        document.querySelector("#amigo").placeholder = "Selecione o tipo do sorteio";
 
         // Habilita o botão "Sortear amigo" ao recarregar a página
         document.querySelector(".button-sortear-amigo").disabled = false;
