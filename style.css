@@ -1,8 +1,8 @@
 :root {
     --color-primary: #864bd4;
     --color-secondary: #f7f4f8f6;
-    --color-tertiary: #d7beee;
-    --color-button: #4dcf5e;
+    --color-tertiary: #cbace7;
+    --color-button: #4faf5c;
     --color-button-hover: #8540d4;
     --color-text: #ffffff;
     --color-text-black: #000;
@@ -179,7 +179,8 @@ button {
 }
 
 .button-aSecretoSorteador.active {
-    background-color: #ee8181; /* Cor quando ativo */
+    background-color: var(--color-primary); /* Cor quando ativo */
+    color: var(--color-white);
 }
 
 .button-add {
@@ -191,7 +192,7 @@ button {
 }
 
 .button-reset {
-    background-color: #d791e9;
+    background-color: var(--color-tertiary);
     color: var(--color-text-black);
     border-radius: 60px 60px;
     font-size: 18px;
@@ -200,7 +201,7 @@ button {
 }
 
 .button-reset:hover {
-    background-color: #ee8181;
+    background-color: #ee933f;
 }
 
 .button-add:hover {
