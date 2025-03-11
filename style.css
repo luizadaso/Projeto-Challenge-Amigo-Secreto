@@ -34,8 +34,8 @@ body {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    width: 120%; /* Ajuste a largura para 90% ou um valor que você preferir */
-    max-width: 1000px; /* Defina uma largura máxima, se desejado */
+    max-width: 1024px;
+    max-height: 800px;
     flex-grow: 1;
     padding: 0 20px; /* Mantenha ou ajuste o preenchimento lateral */
     margin-top: 0;
@@ -346,10 +346,10 @@ ul {
 
     .main-content {
         width: 120%; 
-        max-width: none;
         padding: 0 5px;
         align-items: center;
         min-height: 85vh;
+        margin: -30px;
     }
 
     .img-casal {
