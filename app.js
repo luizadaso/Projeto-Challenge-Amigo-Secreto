@@ -99,6 +99,7 @@ function inicializarApp() {
             document.getElementById("resultado").textContent = `Sorteado(a): ${resultadoSorteio}!`;
             console.log(`Nome sorteado: ${resultadoSorteio}!`);
 
+            ocultarElementos();
             return resultadoSorteio;
         } else if (tipoSorteioAtivo === 'amigoSecreto') {
             if (listaNomes.length === 0) {
@@ -107,6 +108,7 @@ function inicializarApp() {
             }
             gerarQRCodes();
             document.querySelector(".button-draw").disabled = true; // Desabilita o botão "Sortear amigo"
+            ocultarElementos();
         }
     }
 
@@ -172,6 +174,13 @@ function inicializarApp() {
             return false; // Impede a interação com o campo
         }
         return true; // Permite a interação com o campo
+    }
+
+    function ocultarElementos() {
+        document.querySelector(".section-title").style.display = "none";
+        document.querySelectorAll(".button-aSecretoSorteador").forEach(button => button.style.display = "none");
+        document.querySelector(".button-add").style.display = "none";
+        document.querySelector("#amigo").style.display = "none";
     }
 
     window.selecionaAmigoSecreto = selecionaAmigoSecreto;
