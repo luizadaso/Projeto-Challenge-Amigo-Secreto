@@ -252,6 +252,14 @@ function inicializarApp() {
             }
         });
 
+        // Adiciona o evento de tecla ao campo de input para adicionar nome ao pressionar "Enter"
+        document.querySelector("#amigo").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                adicionarAmigo();
+                event.preventDefault();
+            }
+        });
+
         document.querySelector("#amigo").placeholder = "Selecione o tipo do sorteio";
 
         // Habilita o botão "Sortear amigo" ao recarregar a página
