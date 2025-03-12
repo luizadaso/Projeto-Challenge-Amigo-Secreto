@@ -41,10 +41,14 @@ function inicializarApp() {
         return true; // Retorna verdadeiro se um tipo de sorteio estiver selecionado
     }
 
+    function capitalizarNomes(nome) { // MODIFICADO
+        return nome.replace(/\b\w/g, char => char.toUpperCase()); // MODIFICADO
+    } // MODIFICADO
+
     function adicionarAmigo() {
         if (!verificarTipoSorteio()) return;
         const amigoInput = document.querySelector("#amigo");
-        const nomeAmigo = amigoInput.value.trim();
+        let nomeAmigo = amigoInput.value.trim();
 
         if (nomeAmigo === "") {
             alert("Digite um nome para adicionar.");
@@ -57,6 +61,7 @@ function inicializarApp() {
             return;
         }
 
+        nomeAmigo = capitalizarNomes(nomeAmigo); // MODIFICADO
         listaNomes.push(nomeAmigo);
         atualizarLista();
         amigoInput.value = "";
@@ -75,7 +80,7 @@ function inicializarApp() {
 
         listaNomes.forEach((nome, index) => {
             const li = document.createElement("li");
-            li.textContent = nome;
+            li.textContent = capitalizarNomes(nome); // MODIFICADO
 
             // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
             if (tipoSorteioAtivo === 'amigoSecreto' && index === 0) {
@@ -112,7 +117,7 @@ function inicializarApp() {
             const resultadoSorteio = listaNomes.splice(indiceSorteado, 1)[0];
 
             atualizarLista();
-            document.getElementById("resultado").textContent = `${resultadoSorteio}!`;
+            document.getElementById("resultado").textContent = `${capitalizarNomes(resultadoSorteio)}!`; // MODIFICADO
             console.log(`Nome sorteado: ${resultadoSorteio}!`);
 
             ocultarElementos();
@@ -172,7 +177,7 @@ function inicializarApp() {
         const qrLinkDisplay = document.getElementById("qrLink");
         qrCodeDisplay.innerHTML = '';
     
-        let nomeExibido = listaNomes[index];
+        let nomeExibido = capitalizarNomes(listaNomes[index]); // MODIFICADO
 
         // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
         if (tipoSorteioAtivo === 'amigoSecreto' && index === listaNomes.length - 1) {
@@ -249,7 +254,7 @@ function inicializarApp() {
 
         if (amigo) {
             const decodedName = atob(amigo); // Decodifica o nome em base64
-            document.getElementById("resultado").innerHTML = `Seu Amigo Secreto é: <span style="color: purple;">${decodedName}</span>`;
+            document.getElementById("resultado").innerHTML = `Seu Amigo Secreto é: <span style="color: purple;">${capitalizarNomes(decodedName)}</span>`; // MODIFICADO
         }
 
         // Adiciona o evento de clique ao campo de input

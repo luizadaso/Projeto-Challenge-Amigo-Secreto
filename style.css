@@ -19,7 +19,7 @@
 }
 
 body {
-    background: linear-gradient(to right, var(--color-primary), #990b8d); /* Gradiente de laranja */
+    background: linear-gradient(to right, var(--color-primary), #990b6a); /* Gradiente de laranja */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -196,7 +196,8 @@ button {
 }
 
 .button-reiniciar:hover {
-    background-color: #ee933f;
+    color: var(--color-text);
+    background-color: #aa1e80;
 }
 
 .button-add:hover {
