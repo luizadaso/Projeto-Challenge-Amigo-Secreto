@@ -402,6 +402,8 @@ ul {
     }
 
     .qr-link a {
-        font-size: 18px;
+        align-items: center;
+        font-size: 60%;
+        padding: 10px;
     }
 }
