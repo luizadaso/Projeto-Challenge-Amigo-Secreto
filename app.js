@@ -20,8 +20,8 @@ function inicializarApp() {
         atualizarEstadoBotoes();
         // Define o placeholder inicial para adicionar um nome
         document.querySelector("#amigo").placeholder = "Digite um nome";
-        document.querySelector(".button-sortear-amigo").style.display = "inline";
-        document.querySelector(".button-sortear-amigo").disabled = false;
+        document.querySelector(".button-sortear-amigo").style.display = "inline"; // MODIFICADO
+        document.querySelector(".button-sortear-amigo").disabled = false; // MODIFICADO
     }
 
     function atualizarEstadoBotoes() {
@@ -157,8 +157,8 @@ function inicializarApp() {
         // Embaralha a lista de amigos, exceto o primeiro (líder), até que ninguém sorteie a si mesmo
         do {
             shuffledNomes = listaNomes.slice(1).sort(() => Math.random() - 0.5);
-            sorteios = [];
-            for (let i = 0; i < listaNomes.length - 1; i++) {
+            sorteios = [shuffledNomes[shuffledNomes.length - 1]]; // O último sorteia o líder
+            for (let i = 0; i < shuffledNomes.length - 1; i++) {
                 sorteios.push(shuffledNomes[i]);
             }
         } while (sorteios.some((amigo, index) => amigo === listaNomes[index + 1]));
@@ -172,8 +172,13 @@ function inicializarApp() {
             qrCodes.push(link);
         }
 
-        // Adiciona o líder ao final da lista de sorteios
-        const encodedNameLider = btoa(listaNomes[0]); // Codifica o nome do líder em base64
+        // O líder sorteia um nome aleatório da lista (exceto ele mesmo)
+        let amigoLider;
+        do {
+            amigoLider = listaNomes[Math.floor(Math.random() * listaNomes.length)];
+        } while (amigoLider === listaNomes[0]);
+
+        const encodedNameLider = btoa(amigoLider); // Codifica o nome sorteado pelo líder em base64
         const linkLider = `${baseUrl}?amigo=${encodedNameLider}`;
         qrCodes.push(linkLider);
 
@@ -243,7 +248,7 @@ function inicializarApp() {
     }
 
     function reiniciarLista() {
-        location.reload(); // Recarrega a página
+        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto";
     }
 
     function verificarTipoSorteioAoClicar() {
