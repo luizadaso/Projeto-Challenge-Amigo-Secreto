@@ -20,8 +20,8 @@ function inicializarApp() {
         atualizarEstadoBotoes();
         // Define o placeholder inicial para adicionar um nome
         document.querySelector("#amigo").placeholder = "Digite um nome";
-        document.querySelector(".button-sortear-amigo").style.display = "inline"; // MODIFICADO
-        document.querySelector(".button-sortear-amigo").disabled = false; // MODIFICADO
+        document.querySelector(".button-sortear-amigo").style.display = "inline";
+        document.querySelector(".button-sortear-amigo").disabled = false;
     }
 
     function atualizarEstadoBotoes() {
@@ -172,11 +172,11 @@ function inicializarApp() {
             qrCodes.push(link);
         }
 
-        // O líder sorteia um nome aleatório da lista (exceto ele mesmo)
+        // O líder sorteia um nome aleatório da lista (exceto ele mesmo e os já sorteados)
         let amigoLider;
         do {
             amigoLider = listaNomes[Math.floor(Math.random() * listaNomes.length)];
-        } while (amigoLider === listaNomes[0]);
+        } while (amigoLider === listaNomes[0] || sorteios.includes(amigoLider));
 
         const encodedNameLider = btoa(amigoLider); // Codifica o nome sorteado pelo líder em base64
         const linkLider = `${baseUrl}?amigo=${encodedNameLider}`;
@@ -248,7 +248,7 @@ function inicializarApp() {
     }
 
     function reiniciarLista() {
-        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto"; // MODIFICADO
+        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto";
     }
 
     function verificarTipoSorteioAoClicar() {
