@@ -24,23 +24,19 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding: 0px;
-    margin-top: auto;
+    margin-top: 10px;
     padding-bottom: 0px;
 }
 
 .main-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
-    max-width: 1024px;
-    max-height: 800px;
+    width: 90%; 
+    max-width: 800px;
     flex-grow: 1;
-    padding: 0 20px; /* Mantenha ou ajuste o preenchimento lateral */
+    padding: 0 20px;
     margin-top: 0;
-    margin: 0px;
-
+    margin: auto;
 }
 
 /* Banner */
@@ -63,12 +59,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    width: 100%;
-    padding: 20px;
+    padding: 10px;
     width: calc(100% - 80px);
-    margin: 0 0 20px 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Títulos */
@@ -106,7 +99,7 @@ body {
     width: 100%;
     padding: 20px;
     border: 1.9px solid #000;
-    border-radius: 25px 0 0 25px;
+    border-radius: 30px 0 0 30px;
     font-size: 16px;
 }
 
@@ -277,7 +270,6 @@ ul {
     font-size: 24px;
     padding: 2px;
     text-align: center;
-    margin: 0px;
 }
 
 .qr-container {
@@ -287,12 +279,13 @@ ul {
 }
 
 .qr-container #qrCode {
-    margin: 10px;            /* Espaçamento entre o QR code e os botões */
+    margin-bottom: 25px;            /* Espaçamento entre o QR code e os botões */
 }
 
 .navigation-buttons {
     display: block;
-    flex-direction: row;       /* Organiza os botões em linha */
+    flex-direction: row;  
+   /* Organiza os botões em linha */
 }
 
 .navigation-buttons button {
@@ -308,14 +301,16 @@ ul {
 }
 
 .qr-link {
-    margin-bottom: 15px; /* Adiciona espaço acima do link */
+    margin-bottom: 30px;
 }
 
 .qr-link a {
     color: var(--color-primary);
-    font-size: 20px;
+    font-size: 25px;
+    border: 1.5px solid var(--color-primary); /* Cor do contorno */
+    border-radius: 20px; /* Bordas arredondadas */
     padding: 10px;
-    margin-bottom: 0px;
+    margin: 10px;
 }
 
 .qr-link a:hover {
@@ -348,8 +343,8 @@ ul {
         width: 120%; 
         padding: 0 5px;
         align-items: center;
-        min-height: 85vh;
-        margin: -30px;
+        min-height: 75vh;
+        margin: 10px;
     }
 
     .img-casal {
@@ -361,8 +356,6 @@ ul {
 
     .button-ativarAmigoSecretoEsorteador {
         font-size: 90%; 
-        padding: 10px;
-        margin-left: 5px;
     }
 
     .button-add {
@@ -386,6 +379,7 @@ ul {
     
     .button-sortear-amigo img {
         margin-right: 20px;
+        margin-bottom: 10px;
     }
 
     .button-reiniciar {
@@ -394,11 +388,12 @@ ul {
     }
     
     .section-title {
-        font-size: 90%;
+        font-size: 95%;
         margin-top: 2px;
     }
     .input-section {
-        padding: 17px;
+        width: 90%;
+        padding: 10px;
     }
 
     .result-list {
