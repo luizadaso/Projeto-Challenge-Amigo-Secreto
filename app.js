@@ -179,13 +179,20 @@ function inicializarApp() {
             nomeExibido += " (Líder)";
         }
     
-        qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>, escaneie e descubra seu Amigo Secreto:`; // Mensagem personalizada com nome em negrito e roxo
-    
-        $(qrCodeDisplay).qrcode(qrCodes[index]);
+        if (index === listaNomes.length - 1) {
+            qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>`;
+        } else {
+            qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>, escaneie e descubra seu Amigo Secreto:`;
+        }
+        
+        // Exibe o QR code apenas se não for o líder
+        if (index !== listaNomes.length - 1) {
+            $(qrCodeDisplay).qrcode(qrCodes[index]);
+        }
     
         // Exibe o link apenas para o primeiro nome que foi adicionado (agora no final da lista)
         if (index === listaNomes.length - 1) {
-            qrLinkDisplay.innerHTML = `<a href="${qrCodes[index]}" target="_blank">Ou clique aqui e veja</a>`;
+            qrLinkDisplay.innerHTML = `<a href="${qrCodes[index]}" target="_blank">Clique aqui e descubra seu Amigo Secreto</a>`;
         } else {
             qrLinkDisplay.innerHTML = '';
         }
