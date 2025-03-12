@@ -400,4 +400,8 @@ ul {
         font-size: 22px;
         margin: 0;
     }
+
+    .qr-link a {
+        font-size: 18px;
+    }
 }
