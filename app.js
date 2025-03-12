@@ -185,7 +185,7 @@ function inicializarApp() {
         }
     
         if (index === listaNomes.length - 1) {
-            qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>`;
+            qrNameDisplay.innerHTML = `Sorteado(a): <strong style="color: purple;">${nomeExibido}</strong>`;
         } else {
             qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>, escaneie e descubra seu Amigo Secreto:`;
         }
