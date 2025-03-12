@@ -243,10 +243,11 @@ function inicializarApp() {
 
     function ocultarElementosAposQRCode() {
         document.querySelector("#amigo").style.display = "none";
-        document.querySelector(".button-ativarAmigoSecretoEsorteador").style.display = "none";
+        document.querySelectorAll(".button-ativarAmigoSecretoEsorteador").forEach(button => button.style.display = "none");
         document.querySelector(".button-add").style.display = "none";
         document.querySelector(".button-sortear-amigo").style.display = "none";
         document.querySelector(".button-reiniciar").style.display = "none";
+        document.querySelector(".section-title").style.display = "none";
     }
 
     window.selecionaAmigoSecreto = selecionaAmigoSecreto;
@@ -264,8 +265,8 @@ function inicializarApp() {
 
         if (amigo) {
             const decodedName = atob(amigo); // Decodifica o nome em base64
-            document.getElementById("resultado").innerHTML = `Seu Amigo Secreto é: <span style="color: purple;">${capitalizarNomes(decodedName)}</span>`; // MODIFICADO
-            ocultarElementosAposQRCode(); // MODIFICADO
+            document.getElementById("resultado").innerHTML = `Seu Amigo Secreto é: <span style="color: purple;">${capitalizarNomes(decodedName)}</span>`;
+            ocultarElementosAposQRCode();
         }
 
         // Adiciona o evento de clique ao campo de input
