@@ -41,9 +41,9 @@ function inicializarApp() {
         return true; // Retorna verdadeiro se um tipo de sorteio estiver selecionado
     }
 
-    function capitalizarNomes(nome) { // MODIFICADO
-        return nome.replace(/\b\w/g, char => char.toUpperCase()); // MODIFICADO
-    } // MODIFICADO
+    function capitalizarNomes(nome) {
+        return nome.replace(/\b\w/g, char => char.toUpperCase());
+    }
 
     function adicionarAmigo() {
         if (!verificarTipoSorteio()) return;
@@ -61,7 +61,7 @@ function inicializarApp() {
             return;
         }
 
-        nomeAmigo = capitalizarNomes(nomeAmigo); // MODIFICADO
+        nomeAmigo = capitalizarNomes(nomeAmigo);
         listaNomes.push(nomeAmigo);
         atualizarLista();
         amigoInput.value = "";
@@ -80,7 +80,7 @@ function inicializarApp() {
 
         listaNomes.forEach((nome, index) => {
             const li = document.createElement("li");
-            li.textContent = capitalizarNomes(nome); // MODIFICADO
+            li.textContent = capitalizarNomes(nome);
 
             // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
             if (tipoSorteioAtivo === 'amigoSecreto' && index === 0) {
@@ -117,7 +117,7 @@ function inicializarApp() {
             const resultadoSorteio = listaNomes.splice(indiceSorteado, 1)[0];
 
             atualizarLista();
-            document.getElementById("resultado").textContent = `${capitalizarNomes(resultadoSorteio)}!`; // MODIFICADO
+            document.getElementById("resultado").textContent = `${capitalizarNomes(resultadoSorteio)}!`;
             console.log(`Nome sorteado: ${resultadoSorteio}!`);
 
             ocultarElementos();
@@ -177,7 +177,7 @@ function inicializarApp() {
         const qrLinkDisplay = document.getElementById("qrLink");
         qrCodeDisplay.innerHTML = '';
     
-        let nomeExibido = capitalizarNomes(listaNomes[index]); // MODIFICADO
+        let nomeExibido = capitalizarNomes(listaNomes[index]);
 
         // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
         if (tipoSorteioAtivo === 'amigoSecreto' && index === listaNomes.length - 1) {
@@ -237,6 +237,16 @@ function inicializarApp() {
         document.querySelectorAll(".button-ativarAmigoSecretoEsorteador").forEach(button => button.style.display = "none");
         document.querySelector(".button-add").style.display = "none";
         document.querySelector("#amigo").style.display = "none";
+        document.querySelector(".button-sortear-amigo").style.display = "none";
+        document.querySelector(".button-reiniciar").style.display = "none";
+    }
+
+    function ocultarElementosAposQRCode() {
+        document.querySelector("#amigo").style.display = "none";
+        document.querySelector(".button-ativarAmigoSecretoEsorteador").style.display = "none";
+        document.querySelector(".button-add").style.display = "none";
+        document.querySelector(".button-sortear-amigo").style.display = "none";
+        document.querySelector(".button-reiniciar").style.display = "none";
     }
 
     window.selecionaAmigoSecreto = selecionaAmigoSecreto;
@@ -255,6 +265,7 @@ function inicializarApp() {
         if (amigo) {
             const decodedName = atob(amigo); // Decodifica o nome em base64
             document.getElementById("resultado").innerHTML = `Seu Amigo Secreto é: <span style="color: purple;">${capitalizarNomes(decodedName)}</span>`; // MODIFICADO
+            ocultarElementosAposQRCode(); // MODIFICADO
         }
 
         // Adiciona o evento de clique ao campo de input
