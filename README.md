@@ -49,7 +49,7 @@ Este projeto foi desenvolvido inteiramente por mim para apresentação ao progra
 Com a conclusão e entrega desse sistema, recebi reconhecicmeno e obtive a badge (insígnia):
 
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/c6b07310-fb1d-400e-8653-f715434cdc33" width="18%" alt="badge" />
+  <img src="https://github.com/user-attachments/assets/c6b07310-fb1d-400e-8653-f715434cdc33" width="25%" alt="badge" />
 </div>
 
 ## Autora
@@ -57,7 +57,7 @@ Com a conclusão e entrega desse sistema, recebi reconhecicmeno e obtive a badge
 Para mais informações, sinta-se à vontade para entrar em contato:
 
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/57cac2a3-49b1-4a0a-aef3-e968523971eb" width="13%" alt="autora" />
+  <img src="https://github.com/user-attachments/assets/57cac2a3-49b1-4a0a-aef3-e968523971eb" width="15%" alt="autora" />
 </div>
 
 - [Github](https://github.com/luizadaso)
