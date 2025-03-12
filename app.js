@@ -248,7 +248,7 @@ function inicializarApp() {
     }
 
     function reiniciarLista() {
-        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto";
+        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto"; // MODIFICADO
     }
 
     function verificarTipoSorteioAoClicar() {
@@ -283,6 +283,7 @@ function inicializarApp() {
         document.querySelectorAll(".button-ativarAmigoSecretoEsorteador").forEach(button => button.style.display = "none");
         document.querySelector(".button-add").style.display = "none";
         document.querySelector(".button-sortear-amigo").style.display = "none";
+        document.querySelector(".button-reiniciar").style.display = "none";
         document.querySelector(".section-title").style.display = "none";
     }
 
@@ -302,7 +303,7 @@ function inicializarApp() {
         if (amigo) {
             const decodedName = atob(amigo); // Decodifica o nome em base64
             document.getElementById("resultado").innerHTML = `Seu Amigo Secreto é: <span style="color: purple;">${capitalizarNomes(decodedName)}</span>`;
-            ocultarElementosAposQRCode();
+            ocultarElementosAposQRCode(); // MODIFICADO
         }
 
         // Adiciona o evento de clique ao campo de input
