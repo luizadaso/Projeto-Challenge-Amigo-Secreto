@@ -20,6 +20,7 @@ function inicializarApp() {
         atualizarEstadoBotoes();
         // Define o placeholder inicial para adicionar um nome
         document.querySelector("#amigo").placeholder = "Digite um nome";
+        document.querySelector(".button-sortear-amigo").style.display = "inline";
         document.querySelector(".button-sortear-amigo").disabled = false;
     }
 
@@ -55,7 +56,13 @@ function inicializarApp() {
         if (nomeAmigo === "") {
             alert("Digite um nome para adicionar.");
             return;
-        } else if (listaNomes.includes(nomeAmigo)) {
+        }
+
+        // Normaliza o nome para comparação case-insensitive
+        const nomeNormalizado = nomeAmigo.toLowerCase();
+
+        // Verifica se o nome já foi adicionado
+        if (listaNomes.some(nome => nome.toLowerCase() === nomeNormalizado)) {
             alert("Este nome já foi adicionado.");
             return;
         } else if (listaNomes.length >= quantidadeLimite) {
@@ -142,24 +149,36 @@ function inicializarApp() {
         qrCodes = [];
         document.getElementById("qrCode").innerHTML = '';
 
-        const amigosRestantes = [...listaNomes];
         const baseUrl = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto/";
 
-        // Embaralha a lista de amigos
-        const shuffledNomes = listaNomes.slice().sort(() => Math.random() - 0.5);
+        let shuffledNomes;
+        let sorteios;
+
+        // Embaralha a lista de amigos, exceto o primeiro (líder), até que ninguém sorteie a si mesmo
+        do {
+            shuffledNomes = listaNomes.slice(1).sort(() => Math.random() - 0.5);
+            sorteios = [];
+            for (let i = 0; i < listaNomes.length - 1; i++) {
+                sorteios.push(shuffledNomes[i]);
+            }
+        } while (sorteios.some((amigo, index) => amigo === listaNomes[index + 1]));
 
         // Gera QR codes para todos os nomes, garantindo que ninguém sorteie a si mesmo
-        for (let i = 0; i < listaNomes.length; i++) {
-            let amigo;
-            do {
-                amigo = shuffledNomes[Math.floor(Math.random() * shuffledNomes.length)];
-            } while (amigo === listaNomes[i]);
-
+        for (let i = 1; i < listaNomes.length; i++) {
+            const amigo = sorteios[i - 1];
             const encodedName = btoa(amigo); // Codifica o nome em base64
             const link = `${baseUrl}?amigo=${encodedName}`;
 
             qrCodes.push(link);
         }
+
+        // Adiciona o líder ao final da lista de sorteios
+        const encodedNameLider = btoa(listaNomes[0]); // Codifica o nome do líder em base64
+        const linkLider = `${baseUrl}?amigo=${encodedNameLider}`;
+        qrCodes.push(linkLider);
+
+        // Move o líder para o final da lista de exibição
+        listaNomes.push(listaNomes.shift());
 
         currentIndex = 0;
         showQR(currentIndex);
@@ -182,6 +201,9 @@ function inicializarApp() {
         // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
         if (tipoSorteioAtivo === 'amigoSecreto' && index === listaNomes.length - 1) {
             nomeExibido += " (Líder)";
+            document.querySelector(".button-reiniciar").style.display = "inline";
+        } else {
+            document.querySelector(".button-reiniciar").style.display = "none";
         }
 
         if (index === listaNomes.length - 1) {
@@ -246,8 +268,9 @@ function inicializarApp() {
         document.querySelectorAll(".button-ativarAmigoSecretoEsorteador").forEach(button => button.style.display = "none");
         document.querySelector(".button-add").style.display = "none";
         document.querySelector("#amigo").style.display = "none";
-        document.querySelector(".button-sortear-amigo").style.display = "none";
-        document.querySelector(".button-reiniciar").style.display = "none";
+        if (tipoSorteioAtivo === 'amigoSecreto') {
+            document.querySelector(".button-sortear-amigo").style.display = "none";
+        }
     }
 
     function ocultarElementosAposQRCode() {
@@ -255,7 +278,6 @@ function inicializarApp() {
         document.querySelectorAll(".button-ativarAmigoSecretoEsorteador").forEach(button => button.style.display = "none");
         document.querySelector(".button-add").style.display = "none";
         document.querySelector(".button-sortear-amigo").style.display = "none";
-        document.querySelector(".button-reiniciar").style.display = "none";
         document.querySelector(".section-title").style.display = "none";
     }
 
