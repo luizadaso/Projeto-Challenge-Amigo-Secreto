@@ -7,8 +7,8 @@ Aplicativo interativo de sorteio de "Amigo Secreto" desenvolvido em JavaScript. 
 Visualize a demonstração do projeto em funcionamento: 
 
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/82b3c9b1-d67e-44d6-b755-6699bc6c649b" width="60%" alt="demonstracao" />  
-  <img src="https://github.com/user-attachments/assets/0bc269f0-fd09-4b51-a6a4-69beb5ed2cf4" width="27%" alt="tela-celular" />
+  <img src="https://github.com/user-attachments/assets/22815f35-558d-481f-8e68-3a7023f6487f" width="65%" alt="demonstracao" />  
+  <img src="https://github.com/user-attachments/assets/f18f1733-5b98-4d38-be4b-b7d4fd93d721" width="24%" alt="tela-celular" />
 
 </div>
 
