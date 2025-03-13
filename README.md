@@ -16,6 +16,12 @@ Visualize o layout do sistema nas telas:
 
 O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de amigos para eventos como festas, confraternizações ou qualquer ocasião em que você queira fazer um sorteio. Com uma interface amigável, é possível adicionar nomes, realizar o sorteio, gerar QR codes e visualizar os amigos restantes de forma intuitiva.
 
+𝘔𝘦𝘶 𝘱𝘳𝘪𝘯𝘤𝘪𝘱𝘢𝘭 𝘥𝘪𝘧𝘦𝘳𝘦𝘯𝘤𝘪𝘢𝘭 𝘯𝘦𝘴𝘵𝘦 𝘱𝘳𝘰𝘫𝘦𝘵𝘰 𝘧𝘰𝘪 𝘤𝘳𝘪𝘢𝘳 𝘰 𝐌𝐨𝐝𝐨: 𝐀𝐦𝐢𝐠𝐨 𝐒𝐞𝐜𝐫𝐞𝐭𝐨.
+
+No modo “Sorteador” a função é apenas sortear os nomes adicionados à lista, mas meu desejo era criar realmente um 𝐀𝐦𝐢𝐠𝐨 𝐒𝐄𝐂𝐑𝐄𝐓𝐎. 
+
+No modo “Amigo Secreto” o primeiro nome adicionado é determinado como o “Líder” do sorteio. O líder é quem está responsável por realizar o sorteio, visando a resolução da situação onde quem sorteia não pode ler o próprio QR Code, pois está utilizando o próprio celular para realizar o sorteio, com isso, apenas para o líder é exibido um link abaixo do QR Code para que ele acesse e veja seu amigo secreto. O líder também foi configurado para aparecer sempre ao final da lista após todos já terem escaneado os QR Codes, visando a segurança da visibilidade do amigo secreto que o líder sorteou.
+
 ## Usabilidade
 
 **Modo: Amigo Secreto:**
