@@ -1,10 +1,10 @@
 # Amigo Secreto 🎉
 
-Aplicativo interativo de sorteio de "Amigo Secreto" desenvolvido em JavaScript. Ele permite que os usuários adicionem amigos, selecionem tipos de sorteio e gerem QR codes personalizados proporcionando uma experiência divertida e dinâmica. Também possui o modo "Sorteador", onde apenas sorteia aleatoriamente os nomes da lista.
+Sistema interativo de sorteio de "Amigo Secreto" desenvolvido em JavaScript. Ele permite que os usuários adicionem amigos, selecionem tipos de sorteio e gerem QR codes personalizados proporcionando uma experiência divertida e dinâmica. Também possui o modo "Sorteador", onde apenas sorteia aleatoriamente os nomes da lista.
 
-## Demonstração
+## Pré-visualização
 
-Visualize a demonstração do projeto em funcionamento: 
+Visualize o resultado do sistema nas telas: 
 
 <div align="left">
   <img src="https://github.com/user-attachments/assets/22815f35-558d-481f-8e68-3a7023f6487f" width="65%" alt="demonstracao" />  
