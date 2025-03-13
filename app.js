@@ -151,39 +151,34 @@ function inicializarApp() {
 
         const baseUrl = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto/";
 
-        let shuffledNomes;
-        let sorteios;
-
-        // Embaralha a lista de amigos, exceto o primeiro (líder), até que ninguém sorteie a si mesmo
-        do {
-            shuffledNomes = listaNomes.slice(1).sort(() => Math.random() - 0.5);
-            sorteios = [shuffledNomes[shuffledNomes.length - 1]]; // O último sorteia o líder
-            for (let i = 0; i < shuffledNomes.length - 1; i++) {
-                sorteios.push(shuffledNomes[i]);
-            }
-        } while (sorteios.some((amigo, index) => amigo === listaNomes[index + 1]));
+        // Embaralha a lista de amigos usando o algoritmo de Fisher-Yates
+        const shuffledNomes = listaNomes.slice();
+        for (let i = shuffledNomes.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledNomes[i], shuffledNomes[j]] = [shuffledNomes[j], shuffledNomes[i]];
+        }
 
         // Gera QR codes para todos os nomes, garantindo que ninguém sorteie a si mesmo
-        for (let i = 1; i < listaNomes.length; i++) {
-            const amigo = sorteios[i - 1];
+        const sorteios = [];
+        for (let i = 0; i < listaNomes.length; i++) {
+            sorteios.push(shuffledNomes[i]);
+        }
+
+        // Verifica se alguém sorteou a si mesmo e reembaralha se necessário
+        for (let i = 0; i < listaNomes.length; i++) {
+            if (sorteios[i] === listaNomes[i]) {
+                return gerarQRCodes(); // Reembaralha se alguém sorteou a si mesmo
+            }
+        }
+
+        // Gera os QR codes
+        for (let i = 0; i < listaNomes.length; i++) {
+            const amigo = sorteios[i];
             const encodedName = btoa(amigo); // Codifica o nome em base64
             const link = `${baseUrl}?amigo=${encodedName}`;
 
             qrCodes.push(link);
         }
-
-        // O líder sorteia um nome aleatório da lista (exceto ele mesmo e os já sorteados)
-        let amigoLider;
-        do {
-            amigoLider = listaNomes[Math.floor(Math.random() * listaNomes.length)];
-        } while (amigoLider === listaNomes[0] || sorteios.includes(amigoLider));
-
-        const encodedNameLider = btoa(amigoLider); // Codifica o nome sorteado pelo líder em base64
-        const linkLider = `${baseUrl}?amigo=${encodedNameLider}`;
-        qrCodes.push(linkLider);
-
-        // Move o líder para o final da lista de exibição
-        listaNomes.push(listaNomes.shift());
 
         currentIndex = 0;
         showQR(currentIndex);
@@ -204,26 +199,20 @@ function inicializarApp() {
         let nomeExibido = capitalizarNomes(listaNomes[index]);
 
         // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
-        if (tipoSorteioAtivo === 'amigoSecreto' && index === listaNomes.length - 1) {
+        if (tipoSorteioAtivo === 'amigoSecreto' && index === 0) {
             nomeExibido += " (Líder)";
             document.querySelector(".button-reiniciar").style.display = "inline";
         } else {
             document.querySelector(".button-reiniciar").style.display = "none";
         }
 
-        if (index === listaNomes.length - 1) {
-            qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>`;
-        } else {
-            qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>, escaneie e descubra seu Amigo Secreto:`;
-        }
+        qrNameDisplay.innerHTML = `<strong style="color: purple;">${nomeExibido}</strong>, escaneie e descubra seu Amigo Secreto:`;
 
-        // Exibe o QR code apenas se não for o líder
-        if (index !== listaNomes.length - 1) {
-            $(qrCodeDisplay).qrcode(qrCodes[index]);
-        }
+        // Exibe o QR code
+        $(qrCodeDisplay).qrcode(qrCodes[index]);
 
         // Exibe o link apenas para o primeiro nome que foi adicionado (agora no final da lista)
-        if (index === listaNomes.length - 1) {
+        if (index === 0) {
             qrLinkDisplay.innerHTML = `<a href="${qrCodes[index]}" target="_blank">Clique aqui e descubra seu Amigo Secreto</a>`;
         } else {
             qrLinkDisplay.innerHTML = '';
@@ -248,7 +237,7 @@ function inicializarApp() {
     }
 
     function reiniciarLista() {
-        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto";
+        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto"; // MODIFICADO
     }
 
     function verificarTipoSorteioAoClicar() {
