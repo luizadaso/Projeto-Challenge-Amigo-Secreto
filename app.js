@@ -134,8 +134,8 @@ function inicializarApp() {
             ocultarElementos();
             return resultadoSorteio;
         } else if (tipoSorteioAtivo === 'amigoSecreto') {
-            if (listaNomes.length < 2) {
-                alert("Adicione pelo menos 2 nomes para sortear.");
+            if (listaNomes.length < 3) {
+                alert("Adicione pelo menos 3 nomes para sortear.");
                 return;
             }
             gerarQRCodes();
@@ -147,41 +147,42 @@ function inicializarApp() {
     function gerarQRCodes() {
         qrCodes = [];
         document.getElementById("qrCode").innerHTML = '';
-
+    
         const baseUrl = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto/";
-
+    
+        let shuffledNomes = listaNomes.slice();
+        let sorteios = [];
+    
         // Embaralha a lista de amigos usando o algoritmo de Fisher-Yates
-        const shuffledNomes = listaNomes.slice();
         for (let i = shuffledNomes.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [shuffledNomes[i], shuffledNomes[j]] = [shuffledNomes[j], shuffledNomes[i]];
         }
-
-        // Gera QR codes para todos os nomes, garantindo que ninguém sorteie a si mesmo
-        const sorteios = [];
+    
+        // Gera os sorteios garantindo que ninguém sorteie a si mesmo
         for (let i = 0; i < listaNomes.length; i++) {
+            if (shuffledNomes[i] === listaNomes[i]) {
+                // Se alguém sorteou a si mesmo, troca com o próximo (ou o primeiro se for o último)
+                const swapIndex = (i + 1) % listaNomes.length;
+                [shuffledNomes[i], shuffledNomes[swapIndex]] = [shuffledNomes[swapIndex], shuffledNomes[i]];
+            }
             sorteios.push(shuffledNomes[i]);
         }
-
-        // Verifica se alguém sorteou a si mesmo e reembaralha se necessário
-        for (let i = 0; i < listaNomes.length; i++) {
-            if (sorteios[i] === listaNomes[i]) {
-                return gerarQRCodes(); // Reembaralha se alguém sorteou a si mesmo
-            }
-        }
-
+    
+        console.log("Sorteios finais:", sorteios);
+    
         // Gera os QR codes
         for (let i = 0; i < listaNomes.length; i++) {
             const amigo = sorteios[i];
             const encodedName = btoa(amigo); // Codifica o nome em base64
             const link = `${baseUrl}?amigo=${encodedName}`;
-
+    
             qrCodes.push(link);
         }
-
+    
         currentIndex = 0;
         showQR(currentIndex);
-
+    
         document.getElementById("resultado").style.display = "none";
         document.getElementById("prevButton").style.display = "inline";
         document.getElementById("nextButton").style.display = "inline";
