@@ -196,10 +196,13 @@ function inicializarApp() {
         const qrLinkDisplay = document.getElementById("qrLink");
         qrCodeDisplay.innerHTML = '';
 
-        let nomeExibido = capitalizarNomes(listaNomes[index]);
+        // Move o líder para o final da lista na exibição
+        const listaExibicao = listaNomes.slice(1).concat(listaNomes[0]);
 
-        // Adiciona o texto "(Líder)" ao primeiro nome da lista, apenas para Amigo Secreto
-        if (tipoSorteioAtivo === 'amigoSecreto' && index === 0) {
+        let nomeExibido = capitalizarNomes(listaExibicao[index]);
+
+        // Adiciona o texto "(Líder)" ao último nome da lista, apenas para Amigo Secreto
+        if (tipoSorteioAtivo === 'amigoSecreto' && index === listaExibicao.length - 1) {
             nomeExibido += " (Líder)";
             document.querySelector(".button-reiniciar").style.display = "inline";
         } else {
@@ -211,8 +214,8 @@ function inicializarApp() {
         // Exibe o QR code
         $(qrCodeDisplay).qrcode(qrCodes[index]);
 
-        // Exibe o link apenas para o primeiro nome que foi adicionado (agora no final da lista)
-        if (index === 0) {
+        // Exibe o link apenas para o líder
+        if (index === listaExibicao.length - 1) {
             qrLinkDisplay.innerHTML = `<a href="${qrCodes[index]}" target="_blank">Clique aqui e descubra seu Amigo Secreto</a>`;
         } else {
             qrLinkDisplay.innerHTML = '';
@@ -237,7 +240,7 @@ function inicializarApp() {
     }
 
     function reiniciarLista() {
-        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto"; // MODIFICADO
+        window.location.href = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto";
     }
 
     function verificarTipoSorteioAoClicar() {
