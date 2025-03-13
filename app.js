@@ -150,40 +150,7 @@ function inicializarApp() {
     
         const baseUrl = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto/";
     
-        let shuffledNomes;
-        let sorteios;
-        let valid = false;
-    
-        while (!valid) {
-            // Embaralha a lista de amigos usando o algoritmo de Fisher-Yates
-            shuffledNomes = listaNomes.slice();
-            for (let i = shuffledNomes.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [shuffledNomes[i], shuffledNomes[j]] = [shuffledNomes[j], shuffledNomes[i]];
-            }
-    
-            // Gera os sorteios
-            sorteios = [];
-            for (let i = 0; i < listaNomes.length; i++) {
-                sorteios.push(shuffledNomes[i]);
-            }
-    
-            console.log("Sorteios:", sorteios);
-            console.log("Lista original:", listaNomes);
-    
-            // Verifica se alguém sorteou a si mesmo
-            valid = true;
-            for (let i = 0; i < listaNomes.length; i++) {
-                if (sorteios[i] === listaNomes[i]) {
-                    valid = false;
-                    break;
-                }
-            }
-    
-            if (!valid) {
-                console.log("Reembaralhando, alguém sorteou a si mesmo.");
-            }
-        }
+        let sorteios = gerarDesarranjo(listaNomes);
     
         console.log("Sorteios finais:", sorteios);
     
@@ -204,6 +171,22 @@ function inicializarApp() {
         document.getElementById("nextButton").style.display = "inline";
         document.getElementById("listaAmigos").style.display = "none";
         document.getElementById("amigo").value = "";
+    }
+    
+    // Função para gerar um desarranjo (derangement)
+    function gerarDesarranjo(arr) {
+        let n = arr.length;
+        let result = arr.slice();
+    
+        do {
+            // Embaralha a lista de amigos usando o algoritmo de Fisher-Yates
+            for (let i = result.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [result[i], result[j]] = [result[j], result[i]];
+            }
+        } while (result.some((sorteado, index) => sorteado === arr[index]));
+    
+        return result;
     }
 
     function showQR(index) {
