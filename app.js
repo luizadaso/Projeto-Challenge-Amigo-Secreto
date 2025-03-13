@@ -172,7 +172,13 @@ function inicializarApp() {
             console.log("Lista original:", listaNomes);
     
             // Verifica se alguém sorteou a si mesmo
-            valid = !sorteios.some((sorteado, index) => sorteado === listaNomes[index]);
+            valid = true;
+            for (let i = 0; i < listaNomes.length; i++) {
+                if (sorteios[i] === listaNomes[i]) {
+                    valid = false;
+                    break;
+                }
+            }
     
             if (!valid) {
                 console.log("Reembaralhando, alguém sorteou a si mesmo.");
