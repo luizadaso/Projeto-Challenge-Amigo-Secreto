@@ -231,16 +231,17 @@ ul {
     padding: 2px;
 }
 
-/* Botão de sortear título */
 .button-sortear-amigo {
     display: flex;
     align-items: center;
+    justify-content: center; /* Adiciona esta linha para centralizar o texto horizontalmente */
     width: 100%;
     padding: 10px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 20px;
     margin: 10px;
+    text-align: center; /* Adiciona esta linha para garantir que o texto esteja centralizado */
 }
 
 .button-sortear-amigo img {

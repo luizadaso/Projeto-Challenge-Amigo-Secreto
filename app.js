@@ -20,7 +20,6 @@ function inicializarApp() {
         atualizarEstadoBotoes();
         // Define o placeholder inicial para adicionar um nome
         document.querySelector("#amigo").placeholder = "Digite um nome";
-        document.querySelector(".button-sortear-amigo").style.display = "inline";
         document.querySelector(".button-sortear-amigo").disabled = false;
     }
 
