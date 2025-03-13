@@ -150,23 +150,33 @@ function inicializarApp() {
     
         const baseUrl = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto/";
     
-        let shuffledNomes = listaNomes.slice();
-        let sorteios = [];
+        let shuffledNomes;
+        let sorteios;
+        let valid = false;
     
-        // Embaralha a lista de amigos usando o algoritmo de Fisher-Yates
-        for (let i = shuffledNomes.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffledNomes[i], shuffledNomes[j]] = [shuffledNomes[j], shuffledNomes[i]];
-        }
-    
-        // Gera os sorteios garantindo que ninguém sorteie a si mesmo
-        for (let i = 0; i < listaNomes.length; i++) {
-            if (shuffledNomes[i] === listaNomes[i]) {
-                // Se alguém sorteou a si mesmo, troca com o próximo (ou o primeiro se for o último)
-                const swapIndex = (i + 1) % listaNomes.length;
-                [shuffledNomes[i], shuffledNomes[swapIndex]] = [shuffledNomes[swapIndex], shuffledNomes[i]];
+        while (!valid) {
+            // Embaralha a lista de amigos usando o algoritmo de Fisher-Yates
+            shuffledNomes = listaNomes.slice();
+            for (let i = shuffledNomes.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledNomes[i], shuffledNomes[j]] = [shuffledNomes[j], shuffledNomes[i]];
             }
-            sorteios.push(shuffledNomes[i]);
+    
+            // Gera os sorteios
+            sorteios = [];
+            for (let i = 0; i < listaNomes.length; i++) {
+                sorteios.push(shuffledNomes[i]);
+            }
+    
+            console.log("Sorteios:", sorteios);
+            console.log("Lista original:", listaNomes);
+    
+            // Verifica se alguém sorteou a si mesmo
+            valid = !sorteios.some((sorteado, index) => sorteado === listaNomes[index]);
+    
+            if (!valid) {
+                console.log("Reembaralhando, alguém sorteou a si mesmo.");
+            }
         }
     
         console.log("Sorteios finais:", sorteios);
