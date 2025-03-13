@@ -150,12 +150,17 @@ function inicializarApp() {
     
         const baseUrl = "https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto/";
     
-        let sorteios = gerarDesarranjo(listaNomes);
+        // Move o líder para o final da lista
+        const listaNomesAjustada = listaNomes.slice(1).concat(listaNomes[0]);
+    
+        console.log("Lista ajustada (líder no final):", listaNomesAjustada);
+    
+        let sorteios = gerarDesarranjo(listaNomesAjustada);
     
         console.log("Sorteios finais:", sorteios);
     
         // Gera os QR codes
-        for (let i = 0; i < listaNomes.length; i++) {
+        for (let i = 0; i < listaNomesAjustada.length; i++) {
             const amigo = sorteios[i];
             const encodedName = btoa(amigo); // Codifica o nome em base64
             const link = `${baseUrl}?amigo=${encodedName}`;
