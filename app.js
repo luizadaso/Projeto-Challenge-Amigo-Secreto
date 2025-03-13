@@ -253,7 +253,7 @@ function inicializarApp() {
 
     function verificarBotaoSortear() {
         const botaoSortear = document.querySelector(".button-sortear-amigo");
-        if (tipoSorteioAtivo === 'amigoSecreto' && listaNomes.length < 2) {
+        if (tipoSorteioAtivo === 'amigoSecreto' && listaNomes.length < 3) {
             botaoSortear.disabled = true;
         } else {
             botaoSortear.disabled = false;
