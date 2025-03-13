@@ -134,8 +134,8 @@ function inicializarApp() {
             ocultarElementos();
             return resultadoSorteio;
         } else if (tipoSorteioAtivo === 'amigoSecreto') {
-            if (listaNomes.length < 3) {
-                alert("Adicione pelo menos 3 nomes para sortear.");
+            if (listaNomes.length < 2) {
+                alert("Adicione pelo menos 2 nomes para sortear.");
                 return;
             }
             gerarQRCodes();
@@ -257,7 +257,7 @@ function inicializarApp() {
 
     function verificarBotaoSortear() {
         const botaoSortear = document.querySelector(".button-sortear-amigo");
-        if (tipoSorteioAtivo === 'amigoSecreto' && listaNomes.length < 3) {
+        if (tipoSorteioAtivo === 'amigoSecreto' && listaNomes.length < 2) {
             botaoSortear.disabled = true;
         } else {
             botaoSortear.disabled = false;
