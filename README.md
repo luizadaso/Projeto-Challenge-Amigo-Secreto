@@ -1,47 +1,91 @@
 # Amigo Secreto 🎉
 
-Um sistema interativo de "Amigo Secreto" que permite adicionar, sortear e gerenciar amigos de forma simples e eficiente.
+Aplicativo interativo de sorteio de "Amigo Secreto" desenvolvido em JavaScript. Ele permite que os usuários adicionem amigos, selecionem tipos de sorteio e gerem QR codes personalizados proporcionando uma experiência divertida e dinâmica. Também possui o modo "Sorteador", onde apenas sorteia aleatoriamente os nomes da lista.
 
 ## Demonstração
 
 Visualize a demonstração do projeto em funcionamento: 
 
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/bc080b01-7230-437d-8f11-2a2adea46778" width="55%" alt="demonstracao" />  
-  <img src="https://github.com/user-attachments/assets/596037bc-0361-4070-ac84-355f02c4fc0a" width="40%" alt="tela-celular" />
+  <img src="https://github.com/user-attachments/assets/82b3c9b1-d67e-44d6-b755-6699bc6c649b" width="60%" alt="demonstracao" />  
+  <img src="https://github.com/user-attachments/assets/0bc269f0-fd09-4b51-a6a4-69beb5ed2cf4" width="27%" alt="tela-celular" />
 
 </div>
 
 ## Descrição
 
-O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de amigos para eventos como festas, confraternizações ou qualquer ocasião em que você queira fazer um sorteio. Com uma interface amigável, é possível adicionar nomes, realizar o sorteio e visualizar os amigos restantes de forma intuitiva.
-
-## Funcionalidades
-
-- **Adição de Nomes**: Adicione os nomes dos amigos que participarão do sorteio.
-- **Validação de Entrada**: Evita a adição de nomes duplicados e exige que os nomes sejam válidos.
-- **Limite de Participantes**: Permite adicionar até 10 amigos.
-- **Sorteio Aleatório**: Realiza o sorteio de forma aleatória e remove o nome sorteado da lista de amigos restantes.
-- **Interface Intuitiva**: A aplicação é fácil de usar e tem uma interface limpa e responsiva.
-
-## Tecnologias Utilizadas
-
-- **HTML**: Para a estruturação da página web.
-- **CSS**: Para estilização e layout da interface, também configurado para telas de smartpphones.
-- **JavaScript**: Para a lógica de funcionamento do sistema e manipulação do DOM.
-- **Git & GitHub:** Para controle de versão e colaboração, mantendo o histórico do projeto e facilitando o compartilhamento do código.
+O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de amigos para eventos como festas, confraternizações ou qualquer ocasião em que você queira fazer um sorteio. Com uma interface amigável, é possível adicionar nomes, realizar o sorteio, gerar QR codes e visualizar os amigos restantes de forma intuitiva.
 
 ## Uso
 
-1. Adicione os nomes dos amigos no campo de entrada e clique em "Adicionar".
-2. Após adicionar todos os amigos, clique no botão "Sortear amigo" para realizar o sorteio.
-3. O nome sorteado será exibido, e ele será removido da lista de amigos disponíveis.
-4. Você pode reiniciar a lista a qualquer momento clicando no botão "Reiniciar".
+**Modo: Amigo Secreto:**
+
+1. Clique no botão correspondente para selecionar o tipo de sorteio desejado: "Amigo Secreto".
+2. No campo de entrada identificado como "Nome do Líder", insira o nome de quem está realizando o sorteio.
+3. Clique no botão "Adicionar" ou pressione a tecla Enter para incluir o nome na lista.
+4. Certifique-se de que há pelo menos dois amigos na lista.
+5. Após adicionar amigos, clique no botão "Sortear amigo".
+6. O QR code correspondente ao amigo sorteado será exibido.
+7. Cada pessoa pode ler o QR Code utilizando a câmera do celular.
+8. Você pode navegar entre eles usando os botões "Anterior" e "Próximo".
+9. Ao escanear o QR Code, você é direcionado ao link que mostrará seu amigo secreto.
+10. O líder do sorteio sempre aparecerá ao final da lista.
+11. Somente para o líder será exibido um link abaixo do QR code para que ele possa clicar e visualizar seu amigo secreto.
+12. Se desejar realizar um novo sorteio, clique no botão "Reiniciar". Isso limpará a lista atual e permitirá que você comece novamente.
+
+**Modo: Sorteador**
+
+1. Clique no botão correspondente para selecionar o tipo de sorteio desejado: "Sorteador".
+2. No campo de entrada identificado como "Digite um nome", insira o nome.
+3. Clique no botão "Adicionar" ou pressione a tecla Enter para incluir o nome na lista.
+4. Após adicionar amigos, clique no botão "Sortear amigo".
+5. Será exibido o nome sorteado abaixo da lista onde consta os nomes restantes.
+6. Clique novamente em "Sortear amigo" até que todos sejam sorteados.
+7. Se desejar realizar um novo sorteio, clique no botão "Reiniciar". Isso limpará a lista atual e permitirá que você comece novamente.
 
 ## Teste e divirta-se com seus amigos
 👉 Acesse aqui: [Amigo Secreto](https://luizadaso.github.io/Projeto-Challenge-Amigo-Secreto)
 
 Se gostou do projeto, não esqueça de deixar uma ⭐ no repositório! 😊  
+
+## Funcionalidades
+
+- **Adição de Nomes**: Adicionar amigos à lista.
+- **Tipo de Sorteio**: Selecionar o tipo de sorteio (Amigo Secreto ou Sorteador).
+- **Validação de Entrada**: Evita a adição de nomes duplicados e exige que os nomes sejam válidos.
+- **Limite de Participantes**: Permite adicionar até 50 amigos.
+- **QR Code**: Gerar e exibir QR codes para cada amigo.
+- **Navegação**: Navegar entre os QR codes gerados.
+- **Reinício rápido**: Reiniciar a lista de amigos e sortear novamente.
+- **Sorteio Aleatório**: Realiza o sorteio de forma aleatória e remove o nome sorteado da lista de amigos restantes.
+- **Interface Intuitiva**: A aplicação é fácil de usar e tem uma interface limpa e responsiva.
+
+## Tecnologias Utilizadas
+
+- **JavaScript**: Gerencia o estado do aplicativo de sorteio.
+- **Arrays**: Armazena dados dos amigos.
+- **Manipulação do DOM**: Atualiza a interface com interações do usuário.
+- **Funções**: Promove modularidade e reutilização de código.
+- **Validação de Entrada**: Garante que os nomes sejam adicionados corretamente.
+- **Expressões Regulares**: Utilizadas para formatação de nomes.
+- **Lógica Condicional**: Controla o fluxo do aplicativo.
+- **Alertas**: Fornecem feedback ao usuário.
+- **Event Listeners**: Controlam a remoção de itens.
+- **Algoritmos de Sorteio**: Implementam a lógica do sorteio dinamicamente.
+- **QR Codes**: Gerados utilizando codificação base64.
+- **Algoritmos**: Para randomização de dados e modularidade do código.
+- **Algoritmo de Desarranjo**: Utiliza Fisher-Yates para embaralhar a lista de amigos.
+- **DOM Manipulation**: Exibe QR codes e informações dinâmicas.
+- **Strings HTML**: Utilizadas para formatar conteúdo.
+- **Funções de Navegação**: Exibem QR codes anteriores e próximos.
+- **Validação de Entrada**: Garante interações válidas.
+- **Controle de Estado**: Melhora a experiência do usuário.
+- **Ocultação de Elementos**: Facilita a navegação e uso do aplicativo.
+- **Exposição de Funções**: Permite acesso global às funções principais.
+- **Event Listeners**: Implementam interatividade ao aplicativo.
+- **Manipulação de URL Parameters**: Personaliza a experiência do usuário ao carregar a página.
+- **CSS**: Para estilização e layout da interface, também configurado para telas de smartpphones.
+- **Git & GitHub:** Para controle de versão e colaboração, mantendo o histórico do projeto e facilitando o compartilhamento do código.
 
 ## Conquista
 
