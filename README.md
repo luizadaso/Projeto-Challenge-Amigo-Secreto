@@ -4,7 +4,7 @@ Sistema interativo de sorteio de "Amigo Secreto" desenvolvido em JavaScript. Ele
 
 ## Pré-visualização
 
-Visualize o resultado do sistema nas telas: 
+Visualize o layout do sistema nas telas: 
 
 <div align="left">
   <img src="https://github.com/user-attachments/assets/22815f35-558d-481f-8e68-3a7023f6487f" width="65%" alt="demonstracao" />  
