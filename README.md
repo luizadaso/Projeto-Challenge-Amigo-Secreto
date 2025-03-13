@@ -16,7 +16,7 @@ Visualize a demonstração do projeto em funcionamento:
 
 O Amigo Secreto é uma aplicação web que facilita o processo de sorteio de amigos para eventos como festas, confraternizações ou qualquer ocasião em que você queira fazer um sorteio. Com uma interface amigável, é possível adicionar nomes, realizar o sorteio, gerar QR codes e visualizar os amigos restantes de forma intuitiva.
 
-## Uso
+## Usabilidade
 
 **Modo: Amigo Secreto:**
 
