@@ -204,6 +204,7 @@ function inicializarApp() {
         const qrCodeDisplay = document.getElementById("qrCode");
         const qrNameDisplay = document.getElementById("qrName");
         const qrLinkDisplay = document.getElementById("qrLink");
+        document.querySelector(".button-reiniciar").style.display = "inline";
         qrCodeDisplay.innerHTML = '';
 
         // Move o líder para o final da lista na exibição
@@ -214,7 +215,6 @@ function inicializarApp() {
         // Adiciona o texto "(Líder)" ao último nome da lista, apenas para Amigo Secreto
         if (tipoSorteioAtivo === 'amigoSecreto' && index === listaExibicao.length - 1) {
             nomeExibido += " (Líder)";
-            document.querySelector(".button-reiniciar").style.display = "inline";
         } else {
             document.querySelector(".button-reiniciar").style.display = "none";
         }
