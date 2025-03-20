@@ -96,7 +96,7 @@ Se gostou do projeto, não esqueça de deixar uma ⭐ no repositório! 😊
 ## Conquista
 
 Este projeto foi desenvolvido inteiramente por mim para apresentação ao programa [ONE - Oracle Next Education + Alura](https://www.oracle.com/br/education/oracle-next-education/).
-Com a conclusão e entrega desse sistema, recebi reconhecicmeno e obtive a badge (insígnia):
+Com a conclusão e entrega desse sistema, recebi reconhecimento e obtive a badge (insígnia) abaixo:
 
 <div align="left">
   <img src="https://github.com/user-attachments/assets/c6b07310-fb1d-400e-8653-f715434cdc33" width="25%" alt="badge" />
